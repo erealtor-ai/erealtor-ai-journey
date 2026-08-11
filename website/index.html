@@ -1,417 +1,1097 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>S&amp;B Marketing — AI Real Estate OS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ERealtor | AI Real Estate OS</title>
+
+  <meta
+    name="description"
+    content="ERealtor AI — intelligent real estate operating system for leads, properties, follow-ups, matching and automation."
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app">
+  <!-- =====================================================
+       TOP HEADER
+       ===================================================== -->
 
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="sidebar">
+  <header class="top-header">
+
     <div class="brand">
-      <div class="brand-mark"><i class="fa-solid fa-diamond"></i></div>
-      <div class="brand-text">
-        <span class="brand-name">S&amp;B Marketing</span>
-        <span class="brand-sub">AI Real Estate OS</span>
+
+      <div class="brand-logo">
+        E
       </div>
+
+      <div>
+        <h1>ERealtor</h1>
+        <span>AI REAL ESTATE OS</span>
+      </div>
+
     </div>
 
-    <nav class="nav">
-      <a class="nav-item active" href="#"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-users"></i><span>Leads</span><em>128</em></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-building"></i><span>Properties</span><em>286</em></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-arrows-rotate"></i><span>Follow Ups</span><em>18</em></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI Assistant</span></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-bullhorn"></i><span>Marketing</span><i class="fa-solid fa-chevron-right chev"></i></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-chart-line"></i><span>Reports</span><i class="fa-solid fa-chevron-right chev"></i></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-robot"></i><span>Automation</span></a>
-      <a class="nav-item" href="#"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span><em class="pill">New</em></a>
-      <a class="nav-item" href="#"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
-    </nav>
 
-    <div class="ai-nudge">
-      <div class="ai-nudge-top">
-        <span>AI Assistant</span>
-        <i class="fa-solid fa-xmark"></i>
-      </div>
-      <p>Ask anything about your business…</p>
-      <button class="btn-chat">Chat Now</button>
+    <div class="search-box">
+
+      <span>⌕</span>
+
+      <input
+        type="search"
+        placeholder="Search leads, properties, contacts..."
+        aria-label="Search"
+      >
+
     </div>
-  </aside>
 
-  <!-- ============ MAIN ============ -->
-  <main class="main">
 
-    <!-- Topbar -->
-    <header class="topbar">
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search leads, properties, contacts…" />
-        <span class="kbd">Ctrl + K</span>
-      </div>
-      <div class="topbar-actions">
-        <button class="icon-btn accent"><i class="fa-solid fa-plus"></i></button>
-        <button class="icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
-        <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
-        <div class="user">
-          <img src="https://i.pravatar.cc/64?img=13" alt="" />
-          <div class="user-meta">
-            <span class="user-name">Hamza Ahmed</span>
-            <span class="user-role">Admin</span>
-          </div>
+    <div class="header-actions">
+
+      <button
+        type="button"
+        title="Add New"
+        aria-label="Add New"
+      >
+        ＋
+      </button>
+
+      <button
+        type="button"
+        title="Quick Actions"
+        aria-label="Quick Actions"
+      >
+        ◉
+      </button>
+
+      <button
+        type="button"
+        title="Notifications"
+        aria-label="Notifications"
+      >
+        ♢
+      </button>
+
+
+      <div class="admin">
+
+        <div class="admin-avatar">
+          H
         </div>
-      </div>
-    </header>
 
-    <div class="page">
-
-      <div class="page-head">
         <div>
-          <h1>Dashboard <span class="wave">👋</span></h1>
-          <p>Welcome back, Hamza! Here's what's happening today.</p>
+          <strong>Hamza</strong>
+          <small>Administrator</small>
         </div>
-        <button class="date-pill"><i class="fa-regular fa-calendar"></i> May 20, 2025 <i class="fa-solid fa-chevron-down"></i></button>
+
       </div>
 
-      <!-- Stat cards -->
-      <section class="stats">
-        <div class="stat-card">
-          <div class="stat-icon purple"><i class="fa-solid fa-users"></i></div>
-          <div class="stat-body">
-            <span class="stat-label">Total Leads</span>
-            <span class="stat-value">128</span>
-            <span class="stat-foot up"><i class="fa-solid fa-arrow-up"></i> 12% from yesterday</span>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon red"><i class="fa-solid fa-fire"></i></div>
-          <div class="stat-body">
-            <span class="stat-label">Hot Leads</span>
-            <span class="stat-value">12</span>
-            <span class="stat-foot warn"><i class="fa-solid fa-bolt"></i> High Priority</span>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon blue"><i class="fa-solid fa-arrows-rotate"></i></div>
-          <div class="stat-body">
-            <span class="stat-label">Follow Ups</span>
-            <span class="stat-value">18</span>
-            <span class="stat-foot muted">Due Today</span>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon teal"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="stat-body">
-            <span class="stat-label">Site Visits</span>
-            <span class="stat-value">4</span>
-            <span class="stat-foot muted">Today</span>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon green"><i class="fa-solid fa-sack-dollar"></i></div>
-          <div class="stat-body">
-            <span class="stat-label">Expected Commission</span>
-            <span class="stat-value">PKR 12,500,000</span>
-            <span class="stat-foot muted"><i class="fa-solid fa-coins"></i> This Month</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Row 2 -->
-      <section class="grid-3">
-
-        <div class="card match-card">
-          <div class="card-head">
-            <h3>AI Smart Match <span class="badge-soft">Top Recommendation</span></h3>
-          </div>
-          <div class="match-body">
-            <div class="match-lead">
-              <span class="eyebrow"><i class="fa-solid fa-user"></i> Lead</span>
-              <div class="lead-name">Ahmed Khan <span class="tag hot">Hot</span></div>
-              <ul class="req-list">
-                <li><i class="fa-solid fa-check"></i> Residential Plot</li>
-                <li><i class="fa-solid fa-check"></i> 10 Marla</li>
-                <li><i class="fa-solid fa-check"></i> Islamabad</li>
-                <li><i class="fa-solid fa-check"></i> Budget: PKR 2 Crore</li>
-              </ul>
-              <div class="score">
-                <div class="score-ring" style="--p:98"><span>98%</span></div>
-                <div class="score-text">
-                  <span class="score-label">Match Score</span>
-                  <span class="why-link">Why Matched? <i class="fa-solid fa-chevron-down"></i></span>
-                </div>
-              </div>
-              <div class="chips">
-                <span class="chip"><i class="fa-solid fa-check"></i> Same Location</span>
-                <span class="chip"><i class="fa-solid fa-check"></i> Same Size</span>
-                <span class="chip"><i class="fa-solid fa-check"></i> Budget Match</span>
-              </div>
-              <button class="link-btn">View Full Match <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-            <div class="match-property">
-              <span class="eyebrow best">Best Match</span>
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=400&auto=format&fit=crop" alt="Faisal Town plot" />
-              <div class="prop-info">
-                <h4>Faisal Town</h4>
-                <p>Residential Plot</p>
-                <p class="muted-line">10 Marla | Islamabad</p>
-                <div class="prop-price">PKR 8,500,000</div>
-                <span class="avail">Available</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>Leads by Status</h3></div>
-          <div class="donut-wrap">
-            <canvas id="statusDonut" width="200" height="200"></canvas>
-            <div class="donut-center"><span class="donut-num">128</span><span class="donut-label">Total</span></div>
-          </div>
-          <ul class="legend">
-            <li><i class="dot hot"></i> Hot <span>12 (9%)</span></li>
-            <li><i class="dot warm"></i> Warm <span>38 (30%)</span></li>
-            <li><i class="dot cold"></i> Cold <span>78 (61%)</span></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>Upcoming Follow Ups</h3><a href="#">View All</a></div>
-          <ul class="follow-list">
-            <li>
-              <img src="https://i.pravatar.cc/64?img=32" alt="" />
-              <div><span class="fu-name">Usman Ali</span><span class="fu-note">Follow up call</span></div>
-              <span class="fu-time">10:00 AM</span>
-            </li>
-            <li>
-              <img src="https://i.pravatar.cc/64?img=45" alt="" />
-              <div><span class="fu-name">Bilal Ahmed</span><span class="fu-note">Property Visit</span></div>
-              <span class="fu-time">12:00 PM</span>
-            </li>
-            <li>
-              <img src="https://i.pravatar.cc/64?img=48" alt="" />
-              <div><span class="fu-name">Zainab Malik</span><span class="fu-note">Payment Discussion</span></div>
-              <span class="fu-time">03:00 PM</span>
-            </li>
-            <li>
-              <img src="https://i.pravatar.cc/64?img=51" alt="" />
-              <div><span class="fu-name">Ali Raza</span><span class="fu-note">Documents</span></div>
-              <span class="fu-time">04:30 PM</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Row 3 -->
-      <section class="grid-3">
-        <div class="card">
-          <div class="card-head"><h3>Recent Leads</h3><a href="#">View All</a></div>
-          <ul class="recent-list">
-            <li>
-              <img src="https://i.pravatar.cc/64?img=13" alt="" />
-              <div class="rl-info"><span class="rl-name">Ahmed Khan <span class="tag hot sm">Hot</span></span><span class="rl-sub">10 Marla Plot in Islamabad</span></div>
-              <span class="rl-time">2 min ago</span>
-            </li>
-            <li>
-              <img src="https://i.pravatar.cc/64?img=25" alt="" />
-              <div class="rl-info"><span class="rl-name">Usman Ali <span class="tag warm sm">Warm</span></span><span class="rl-sub">5 Marla Plot in Rawalpindi</span></div>
-              <span class="rl-time">15 min ago</span>
-            </li>
-            <li>
-              <img src="https://i.pravatar.cc/64?img=33" alt="" />
-              <div class="rl-info"><span class="rl-name">Bilal Ahmed <span class="tag hot sm">Hot</span></span><span class="rl-sub">Commercial Plot in Bahria</span></div>
-              <span class="rl-time">1 hour ago</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>Properties Overview</h3><a href="#">View All</a></div>
-          <div class="prop-overview">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop" alt="" />
-            <ul>
-              <li><span class="dot purple-dot"></span> Total Properties <b>286</b></li>
-              <li><span class="dot green-dot"></span> Available <b>152</b></li>
-              <li><span class="dot orange-dot"></span> On Hold <b>68</b></li>
-              <li><span class="dot blue-dot"></span> Sold <b>66</b></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>AI Activity Feed</h3><a href="#">View All</a></div>
-          <ul class="activity-list">
-            <li><i class="fa-solid fa-wand-magic-sparkles"></i><span>AI matched 3 properties for Ahmed Khan</span><time>2 min ago</time></li>
-            <li><i class="fa-solid fa-bell"></i><span>Follow up reminder sent to Usman Ali</span><time>15 min ago</time></li>
-            <li><i class="fa-solid fa-user-plus"></i><span>New lead Bilal Ahmed added</span><time>1 hour ago</time></li>
-            <li><i class="fa-solid fa-file-lines"></i><span>Daily report generated</span><time>2 hours ago</time></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Row 4 -->
-      <section class="grid-lower">
-
-        <div class="card wide">
-          <div class="card-head"><h3>Leads Management</h3><button class="add-btn"><i class="fa-solid fa-plus"></i> Add Lead</button></div>
-          <table class="data-table">
-            <thead>
-              <tr><th>Name</th><th>Status</th><th>Type</th><th>Budget</th><th>Last Contact</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="person"><img src="https://i.pravatar.cc/64?img=13" /> Ahmed Khan</td>
-                <td><span class="tag hot">Hot</span></td>
-                <td>Buyer</td>
-                <td>2 Crore</td>
-                <td>2 min ago</td>
-              </tr>
-              <tr>
-                <td class="person"><img src="https://i.pravatar.cc/64?img=25" /> Usman Ali</td>
-                <td><span class="tag warm">Warm</span></td>
-                <td>Buyer</td>
-                <td>1.2 Crore</td>
-                <td>15 min ago</td>
-              </tr>
-              <tr>
-                <td class="person"><img src="https://i.pravatar.cc/64?img=33" /> Bilal Ahmed</td>
-                <td><span class="tag hot">Hot</span></td>
-                <td>Investor</td>
-                <td>5 Crore</td>
-                <td>1 hour ago</td>
-              </tr>
-              <tr>
-                <td class="person"><img src="https://i.pravatar.cc/64?img=44" /> Zainab Malik</td>
-                <td><span class="tag cold">Cold</span></td>
-                <td>Buyer</td>
-                <td>80 Lakh</td>
-                <td>2 hours ago</td>
-              </tr>
-              <tr>
-                <td class="person"><img src="https://i.pravatar.cc/64?img=52" /> Ali Raza</td>
-                <td><span class="tag warm">Warm</span></td>
-                <td>Buyer</td>
-                <td>1.5 Crore</td>
-                <td>3 hours ago</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>Property Listings</h3><button class="add-btn"><i class="fa-solid fa-plus"></i> Add Property</button></div>
-          <div class="prop-grid">
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=300&auto=format&fit=crop" />
-              <h5>Faisal Town</h5><p>10 Marla Plot</p><span>Islamabad</span><b>8.5M</b>
-            </div>
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=300&auto=format&fit=crop" />
-              <h5>Faisal Hills</h5><p>10 Marla Plot</p><span>Islamabad</span><b>9M</b>
-            </div>
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=300&auto=format&fit=crop" />
-              <h5>Bahria Town</h5><p>1 Kanal Plot</p><span>Rawalpindi</span><b>25M</b>
-            </div>
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=300&auto=format&fit=crop" />
-              <h5>DHA Islamabad</h5><p>1 Kanal Plot</p><span>Islamabad</span><b>32M</b>
-            </div>
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=300&auto=format&fit=crop" />
-              <h5>Capital Smart City</h5><p>10 Marla Plot</p><span>Islamabad</span><b>12M</b>
-            </div>
-            <div class="prop-tile">
-              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=300&auto=format&fit=crop" />
-              <h5>Blue World City</h5><p>10 Marla Plot</p><span>Rawalpindi</span><b>7.5M</b>
-            </div>
-          </div>
-        </div>
-
-        <div class="card ai-panel">
-          <div class="card-head ai"><h3><i class="fa-solid fa-wand-magic-sparkles"></i> AI Assistant</h3><i class="fa-solid fa-xmark"></i></div>
-          <div class="ai-msg">Hi Hamza 👋<br>How can I help you today?</div>
-          <div class="ai-suggestions">
-            <button>Show me today's top leads</button>
-            <button>Find best property for 10 Marla in Islamabad</button>
-            <button>Generate WhatsApp message for follow up</button>
-            <button>Show monthly sales report</button>
-          </div>
-          <div class="ai-input">
-            <input type="text" placeholder="Ask anything…" />
-            <button><i class="fa-solid fa-paper-plane"></i></button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Row 5 -->
-      <section class="grid-lower">
-
-        <div class="card">
-          <div class="card-head"><h3>Reports</h3></div>
-          <span class="report-sub">Monthly Report — May 2025</span>
-          <div class="report-stats">
-            <div><span>Total Leads</span><b>128</b><em class="up">↑ 12%</em></div>
-            <div><span>Deals Closed</span><b>26</b><em class="up">↑ 22%</em></div>
-            <div><span>Revenue</span><b>12.5M PKR</b><em class="up">↑ 12%</em></div>
-            <div><span>Conversion</span><b>20.3%</b><em class="up">↑ 7%</em></div>
-          </div>
-          <canvas id="revenueLine" height="90"></canvas>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h3>Calendar</h3>
-            <div class="cal-tabs"><span class="active">Month</span><span>Week</span><span>Day</span></div>
-          </div>
-          <div class="calendar">
-            <div class="cal-grid cal-dow">
-              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-            </div>
-            <div class="cal-grid">
-              <span class="muted">27</span><span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span>3</span>
-              <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
-              <span>11</span><span class="ev site">12<b>Site Visit</b></span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
-              <span>18</span><span class="ev fu">19<b>Follow Up</b></span><span>20</span><span>21</span><span>22</span><span class="ev meet">23<b>Meeting</b></span><span>24</span>
-              <span>25</span><span>26</span><span>27</span><span class="ev pay">28<b>Payment Discussion</b></span><span>29</span><span class="ev doc">30<b>Documents</b></span><span>31</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card whatsapp-panel">
-          <div class="card-head wa"><h3><i class="fa-brands fa-whatsapp"></i> WhatsApp Assistant</h3></div>
-          <label>Select Lead</label>
-          <select><option>Ahmed Khan</option><option>Usman Ali</option></select>
-          <label>Message Type</label>
-          <select><option>Property Recommendation</option><option>Follow Up</option></select>
-          <label>Generated Message</label>
-          <textarea readonly>Assalam o Alaikum Ahmed Khan,
-
-Hope you are doing well.
-
-I have a best property for you in Faisal Town, Islamabad.
-10 Marla Residential Plot is available at PKR 8,500,000.
-
-Let me know if you want to visit the site.
-
-Regards,
-S&amp;B Marketing</textarea>
-          <button class="send-wa"><i class="fa-brands fa-whatsapp"></i> Send on WhatsApp</button>
-        </div>
-      </section>
-
     </div>
-  </main>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="script.js"></script>
+  </header>
+
+
+
+  <!-- =====================================================
+       APPLICATION LAYOUT
+       ===================================================== -->
+
+  <div class="app-layout">
+
+
+    <!-- ===================================================
+         SIDEBAR
+         =================================================== -->
+
+    <aside class="sidebar">
+
+      <nav aria-label="Main Navigation">
+
+
+        <a
+          href="#"
+          class="active"
+        >
+          <span>⌂</span>
+          <span>Dashboard</span>
+        </a>
+
+
+        <a href="#">
+
+          <span>◎</span>
+
+          <span>Leads</span>
+
+          <b>128</b>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>⌂</span>
+
+          <span>Properties</span>
+
+          <b>286</b>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>✓</span>
+
+          <span>Follow Ups</span>
+
+          <b>18</b>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>□</span>
+
+          <span>Calendar</span>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>✦</span>
+
+          <span>AI Assistant</span>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>◈</span>
+
+          <span>Marketing</span>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>▥</span>
+
+          <span>Reports</span>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>⚙</span>
+
+          <span>Automation</span>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>◌</span>
+
+          <span>WhatsApp</span>
+
+          <em>NEW</em>
+
+        </a>
+
+
+        <a href="#">
+
+          <span>⚙</span>
+
+          <span>Settings</span>
+
+        </a>
+
+      </nav>
+
+
+
+      <!-- AI ASSISTANT MINI CARD -->
+
+      <div class="assistant-card">
+
+        <div class="assistant-title">
+
+          <strong>AI Assistant</strong>
+
+          <span>✦</span>
+
+        </div>
+
+
+        <p>
+          Ask anything about your real estate business,
+          leads, properties or follow-ups.
+        </p>
+
+
+        <button type="button">
+          Chat Now
+        </button>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- ===================================================
+         MAIN CONTENT
+         =================================================== -->
+
+    <main class="main-content">
+
+
+      <!-- PAGE HEADING -->
+
+      <section class="page-heading">
+
+        <div>
+
+          <h2>
+            Dashboard 👋
+          </h2>
+
+          <p>
+            Welcome back, Hamza. Here's what's happening today.
+          </p>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="today-button"
+        >
+          □ &nbsp; Today
+        </button>
+
+      </section>
+
+
+
+      <!-- =================================================
+           KPI / BUSINESS SNAPSHOT
+           ================================================= -->
+
+      <section
+        class="stats-grid"
+        aria-label="Business Overview"
+      >
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon blue">
+            ◎
+          </div>
+
+          <div>
+
+            <span>Total Leads</span>
+
+            <strong>
+              128
+            </strong>
+
+            <small>
+              ↑ 12% from yesterday
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon red">
+            !
+          </div>
+
+          <div>
+
+            <span>Hot Leads</span>
+
+            <strong>
+              12
+            </strong>
+
+            <small>
+              High Priority
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon purple">
+            ✓
+          </div>
+
+          <div>
+
+            <span>Follow Ups</span>
+
+            <strong>
+              18
+            </strong>
+
+            <small>
+              Due Today
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon orange">
+            □
+          </div>
+
+          <div>
+
+            <span>Site Visits</span>
+
+            <strong>
+              4
+            </strong>
+
+            <small>
+              Scheduled Today
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon green">
+            Rs
+          </div>
+
+          <div>
+
+            <span>Expected Commission</span>
+
+            <strong>
+              PKR 12.5M
+            </strong>
+
+            <small>
+              This Month
+            </small>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           PRIMARY DASHBOARD
+           ================================================= -->
+
+      <section class="dashboard-grid">
+
+
+        <!-- ===============================================
+             AI SMART MATCH
+             =============================================== -->
+
+        <article class="panel smart-match">
+
+          <div class="panel-heading">
+
+            <div>
+
+              <h3>
+                AI Smart Match
+              </h3>
+
+            </div>
+
+            <span>
+              TOP RECOMMENDATION
+            </span>
+
+          </div>
+
+
+          <div class="match-content">
+
+
+            <!-- LEAD -->
+
+            <div class="lead-info">
+
+              <span class="label">
+                LEAD PROFILE
+              </span>
+
+
+              <h3>
+                Ahmed Khan
+              </h3>
+
+
+              <span class="hot-tag">
+                HOT LEAD
+              </span>
+
+
+              <p>
+                ● Islamabad
+              </p>
+
+              <p>
+                ◇ Residential Plot
+              </p>
+
+              <p>
+                □ 10 Marla
+              </p>
+
+              <p>
+                PKR 2 Crore Budget
+              </p>
+
+            </div>
+
+
+
+            <!-- MATCHED PROPERTY -->
+
+            <div class="property-card">
+
+              <span>
+                98% MATCH
+              </span>
+
+
+              <div class="property-image">
+                ⌂
+              </div>
+
+
+              <h3>
+                Faisal Town
+              </h3>
+
+
+              <p>
+                10 Marla Residential Plot
+              </p>
+
+              <p>
+                Islamabad
+              </p>
+
+
+              <strong>
+                PKR 8.50M
+              </strong>
+
+
+              <small>
+                ● Available
+              </small>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="match-bottom">
+
+
+            <div>
+
+              <span>
+                AI Match Confidence
+              </span>
+
+              <strong>
+                98%
+              </strong>
+
+            </div>
+
+
+            <div class="match-reasons">
+
+              <span>
+                ✓ Location
+              </span>
+
+              <span>
+                ✓ Size
+              </span>
+
+              <span>
+                ✓ Budget
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+             LEADS STATUS
+             =============================================== -->
+
+        <article class="panel">
+
+          <div class="panel-heading">
+
+            <h3>
+              Leads by Status
+            </h3>
+
+          </div>
+
+
+          <div class="status-chart">
+
+
+            <div class="donut">
+
+              <div>
+
+                <strong>
+                  128
+                </strong>
+
+                <span>
+                  Total Leads
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="status-list">
+
+
+              <div>
+
+                <span class="dot hot"></span>
+
+                <span>
+                  Hot
+                </span>
+
+                <strong>
+                  12
+                </strong>
+
+              </div>
+
+
+              <div>
+
+                <span class="dot warm"></span>
+
+                <span>
+                  Warm
+                </span>
+
+                <strong>
+                  38
+                </strong>
+
+              </div>
+
+
+              <div>
+
+                <span class="dot cold"></span>
+
+                <span>
+                  Cold
+                </span>
+
+                <strong>
+                  78
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+             FOLLOW UPS
+             =============================================== -->
+
+        <article class="panel">
+
+          <div class="panel-heading">
+
+            <h3>
+              Upcoming Follow Ups
+            </h3>
+
+            <a href="#">
+              View All
+            </a>
+
+          </div>
+
+
+          <div class="follow-list">
+
+
+            <div>
+
+              <div class="avatar">
+                U
+              </div>
+
+              <section>
+
+                <strong>
+                  Usman Ali
+                </strong>
+
+                <small>
+                  Follow-up call
+                </small>
+
+              </section>
+
+              <time>
+                10:00 AM
+              </time>
+
+            </div>
+
+
+            <div>
+
+              <div class="avatar">
+                B
+              </div>
+
+              <section>
+
+                <strong>
+                  Bilal Ahmed
+                </strong>
+
+                <small>
+                  Property visit
+                </small>
+
+              </section>
+
+              <time>
+                12:00 PM
+              </time>
+
+            </div>
+
+
+            <div>
+
+              <div class="avatar">
+                Z
+              </div>
+
+              <section>
+
+                <strong>
+                  Zainab Malik
+                </strong>
+
+                <small>
+                  Payment discussion
+                </small>
+
+              </section>
+
+              <time>
+                03:00 PM
+              </time>
+
+            </div>
+
+
+            <div>
+
+              <div class="avatar">
+                A
+              </div>
+
+              <section>
+
+                <strong>
+                  Ali Raza
+                </strong>
+
+                <small>
+                  Documents
+                </small>
+
+              </section>
+
+              <time>
+                04:30 PM
+              </time>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+
+      <!-- =================================================
+           SECONDARY BUSINESS GRID
+           ================================================= -->
+
+      <section class="lower-grid">
+
+
+        <!-- ===============================================
+             RECENT LEADS
+             =============================================== -->
+
+        <article class="panel">
+
+          <div class="panel-heading">
+
+            <h3>
+              Recent Leads
+            </h3>
+
+            <a href="#">
+              View All
+            </a>
+
+          </div>
+
+
+          <div class="recent-leads">
+
+
+            <div>
+
+              <span class="mini-avatar">
+                A
+              </span>
+
+              <strong>
+                Ahmed Khan
+              </strong>
+
+              <span class="hot-tag">
+                HOT
+              </span>
+
+              <small>
+                10 Marla Plot · Islamabad
+              </small>
+
+              <time>
+                2 min ago
+              </time>
+
+            </div>
+
+
+            <div>
+
+              <span class="mini-avatar">
+                U
+              </span>
+
+              <strong>
+                Usman Ali
+              </strong>
+
+              <span class="warm-tag">
+                WARM
+              </span>
+
+              <small>
+                5 Marla Plot · Rawalpindi
+              </small>
+
+              <time>
+                15 min ago
+              </time>
+
+            </div>
+
+
+            <div>
+
+              <span class="mini-avatar">
+                B
+              </span>
+
+              <strong>
+                Bilal Ahmed
+              </strong>
+
+              <span class="hot-tag">
+                HOT
+              </span>
+
+              <small>
+                Commercial Plot · Bahria
+              </small>
+
+              <time>
+                1 hour ago
+              </time>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+             PROPERTIES OVERVIEW
+             =============================================== -->
+
+        <article class="panel">
+
+          <div class="panel-heading">
+
+            <h3>
+              Properties Overview
+            </h3>
+
+            <a href="#">
+              View All
+            </a>
+
+          </div>
+
+
+          <div class="property-overview">
+
+
+            <div class="property-placeholder">
+              ⌂
+            </div>
+
+
+            <div class="property-stats">
+
+              <p>
+                Total Properties
+                <strong>286</strong>
+              </p>
+
+              <p>
+                Available
+                <strong>152</strong>
+              </p>
+
+              <p>
+                On Hold
+                <strong>68</strong>
+              </p>
+
+              <p>
+                Sold
+                <strong>66</strong>
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+             AI ACTIVITY
+             =============================================== -->
+
+        <article class="panel">
+
+          <div class="panel-heading">
+
+            <h3>
+              AI Activity Feed
+            </h3>
+
+            <a href="#">
+              View All
+            </a>
+
+          </div>
+
+
+          <div class="activity-feed">
+
+
+            <p>
+
+              ✦ AI matched 3 properties for Ahmed Khan
+
+              <small>
+                2 minutes ago
+              </small>
+
+            </p>
+
+
+            <p>
+
+              ✓ Follow-up reminder sent to Usman Ali
+
+              <small>
+                15 minutes ago
+              </small>
+
+            </p>
+
+
+            <p>
+
+              + New lead Bilal Ahmed added
+
+              <small>
+                1 hour ago
+              </small>
+
+            </p>
+
+
+            <p>
+
+              ▥ Daily report generated
+
+              <small>
+                2 hours ago
+              </small>
+
+            </p>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+
+      <!-- =================================================
+           AI PRODUCT BANNER
+           ================================================= -->
+
+      <section class="ai-banner">
+
+
+        <div>
+
+          <span>
+            ✦ EREALTOR AI
+          </span>
+
+
+          <h2>
+            Your intelligent real estate assistant.
+          </h2>
+
+
+          <p>
+            Manage leads, properties, follow-ups and marketing
+            from one intelligent operating system.
+          </p>
+
+        </div>
+
+
+        <button type="button">
+          Open AI Assistant
+        </button>
+
+      </section>
+
+
+
+      <!-- =================================================
+           FOOTER
+           ================================================= -->
+
+      <footer>
+
+        <strong>
+          ERealtor
+        </strong>
+
+        <span>
+          AI Real Estate OS
+        </span>
+
+        <p>
+          © 2026 ERealtor. All rights reserved.
+        </p>
+
+      </footer>
+
+
+    </main>
+
+  </div>
+
 </body>
 </html>
