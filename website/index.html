@@ -4,956 +4,544 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ERealtor | AI Real Estate</title>
+  <title>ERealtor | AI Real Estate OS</title>
 
   <meta name="description"
-        content="ERealtor - Modern AI-powered real estate platform for properties, projects and trusted real estate services in Islamabad and Rawalpindi.">
+        content="ERealtor - AI powered real estate platform for properties, leads, follow-ups and smart property matching.">
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8fc;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* HEADER */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e9ebf2;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 23px;
-      font-weight: 800;
-      color: #172033;
-    }
-
-    .logo-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #5428d8, #7653ee);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: #555e72;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: #5a35dc;
-    }
-
-    .nav-btn {
-      background: #5b35d5;
-      color: white;
-      padding: 11px 18px;
-      border-radius: 10px;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 85px 0 70px;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(101, 67, 220, .13), transparent 30%),
-        linear-gradient(135deg, #f8f9ff, #eef0ff);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #ece8ff;
-      color: #5836d4;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(40px, 5vw, 66px);
-      line-height: 1.08;
-      margin-bottom: 22px;
-      letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-      color: #5b35d5;
-    }
-
-    .hero p {
-      color: #626b7f;
-      font-size: 18px;
-      max-width: 620px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      padding: 14px 22px;
-      border-radius: 11px;
-      font-weight: 700;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: #5b35d5;
-      color: white;
-    }
-
-    .btn-secondary {
-      background: white;
-      border: 1px solid #dddfea;
-      color: #30394c;
-    }
-
-    .hero-card {
-      background: white;
-      padding: 18px;
-      border-radius: 22px;
-      box-shadow: 0 25px 70px rgba(45, 42, 90, .13);
-    }
-
-    .property-image {
-      height: 300px;
-      border-radius: 16px;
-      background:
-        linear-gradient(rgba(20,20,30,.12), rgba(20,20,30,.15)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
-    }
-
-    .property-info {
-      padding: 18px 5px 4px;
-    }
-
-    .property-info h3 {
-      font-size: 21px;
-      margin-bottom: 5px;
-    }
-
-    .property-info p {
-      margin: 0 0 10px;
-      font-size: 14px;
-    }
-
-    .price {
-      color: #5b35d5;
-      font-weight: 800;
-      font-size: 20px;
-    }
-
-    /* SEARCH */
-    .search-box {
-      margin-top: -35px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .search-inner {
-      background: white;
-      border-radius: 17px;
-      padding: 18px;
-      box-shadow: 0 15px 45px rgba(35, 37, 60, .12);
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr auto;
-      gap: 12px;
-    }
-
-    .search-inner input,
-    .search-inner select {
-      border: 1px solid #e0e3eb;
-      padding: 14px;
-      border-radius: 10px;
-      outline: none;
-      background: white;
-      font-size: 14px;
-    }
-
-    .search-inner button {
-      border: 0;
-      background: #5b35d5;
-      color: white;
-      border-radius: 10px;
-      padding: 0 25px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 0;
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      margin-bottom: 30px;
-      gap: 20px;
-    }
-
-    .section-heading h2 {
-      font-size: 34px;
-      letter-spacing: -.8px;
-    }
-
-    .section-heading p {
-      color: #70788a;
-      max-width: 600px;
-    }
-
-    /* PROJECT CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e9ebf2;
-      border-radius: 17px;
-      overflow: hidden;
-      transition: .25s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 45px rgba(35, 37, 60, .10);
-    }
-
-    .card-img {
-      height: 210px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .faisal-town {
-      background-image: url("https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .faisal-hills {
-      background-image: url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .faisal-margalla {
-      background-image: url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h3 {
-      margin-bottom: 5px;
-    }
-
-    .location {
-      color: #727a8b;
-      font-size: 14px;
-      margin-bottom: 13px;
-    }
-
-    .card-link {
-      color: #5b35d5;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    /* STATS */
-    .stats {
-      background: #171b2d;
-      color: white;
-      padding: 50px 0;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
-
-    .stat h3 {
-      font-size: 34px;
-      color: white;
-    }
-
-    .stat p {
-      color: #aeb4c6;
-      font-size: 14px;
-    }
-
-    /* AI SECTION */
-    .ai-section {
-      background: linear-gradient(135deg, #f0edff, #faf9ff);
-    }
-
-    .ai-box {
-      background: white;
-      border: 1px solid #e3defc;
-      border-radius: 22px;
-      padding: 42px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .ai-box h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .ai-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .ai-item {
-      padding: 14px;
-      background: #f7f6ff;
-      border-radius: 10px;
-      color: #50586a;
-    }
-
-    .match-card {
-      background: #171b2d;
-      color: white;
-      border-radius: 18px;
-      padding: 28px;
-    }
-
-    .match-score {
-      font-size: 48px;
-      font-weight: 800;
-      color: #8c72ff;
-      margin: 15px 0;
-    }
-
-    /* CTA */
-    .cta {
-      background: #5b35d5;
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: #e1dcff;
-      margin-bottom: 25px;
-    }
-
-    .cta .btn-secondary {
-      color: #4d2bc2;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #101321;
-      color: white;
-      padding: 50px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    footer h3 {
-      margin-bottom: 13px;
-    }
-
-    footer p,
-    footer a {
-      color: #aab0c0;
-      font-size: 14px;
-    }
-
-    footer a {
-      display: block;
-      margin: 7px 0;
-    }
-
-    .copyright {
-      border-top: 1px solid #292d3c;
-      padding-top: 20px;
-      color: #7e8597;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    /* MOBILE */
-    @media(max-width: 850px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .ai-box {
-        grid-template-columns: 1fr;
-      }
-
-      .search-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .search-inner button {
-        padding: 14px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container navbar">
+  <!-- TOP HEADER -->
+  <header class="top-header">
 
-      <a href="#" class="logo">
-        <div class="logo-icon">E</div>
-        <div>
-          <div>ERealtor</div>
-          <small style="font-size:10px;color:#858b9b;">
-            AI REAL ESTATE OS
-          </small>
-        </div>
-      </a>
+    <div class="brand">
+      <div class="brand-logo">E</div>
 
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#properties">Properties</a>
-        <a href="#ai">AI Match</a>
-        <a href="#contact" class="nav-btn">Contact Us</a>
-      </nav>
-
+      <div>
+        <h1>ERealtor</h1>
+        <span>AI Real Estate OS</span>
+      </div>
     </div>
+
+    <div class="search-box">
+      🔎
+      <input
+        type="text"
+        placeholder="Search leads, properties, contacts..."
+      >
+    </div>
+
+    <div class="header-actions">
+      <button>＋</button>
+      <button>◉</button>
+      <button>🔔</button>
+
+      <div class="admin">
+        <div class="admin-avatar">H</div>
+        <div>
+          <strong>Hamza</strong>
+          <small>Admin</small>
+        </div>
+      </div>
+    </div>
+
   </header>
 
 
-  <!-- HERO -->
-  <main id="home">
+  <!-- MAIN LAYOUT -->
+  <div class="app-layout">
 
-    <section class="hero">
-      <div class="container hero-grid">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <nav>
+
+        <a class="active" href="#">🏠 <span>Dashboard</span></a>
+
+        <a href="#">
+          👥 <span>Leads</span>
+          <b>128</b>
+        </a>
+
+        <a href="#">
+          🏡 <span>Properties</span>
+          <b>286</b>
+        </a>
+
+        <a href="#">
+          ✓ <span>Follow Ups</span>
+          <b>18</b>
+        </a>
+
+        <a href="#">📅 <span>Calendar</span></a>
+
+        <a href="#">✨ <span>AI Assistant</span></a>
+
+        <a href="#">📣 <span>Marketing</span></a>
+
+        <a href="#">📊 <span>Reports</span></a>
+
+        <a href="#">⚙ <span>Automation</span></a>
+
+        <a href="#">
+          💬 <span>WhatsApp</span>
+          <em>New</em>
+        </a>
+
+        <a href="#">⚙ <span>Settings</span></a>
+
+      </nav>
+
+
+      <!-- AI ASSISTANT CARD -->
+      <div class="assistant-card">
+
+        <div class="assistant-title">
+          <strong>AI Assistant</strong>
+          <span>×</span>
+        </div>
+
+        <p>
+          Ask anything about your real estate business...
+        </p>
+
+        <button>Chat Now</button>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- CONTENT -->
+    <main class="main-content">
+
+      <!-- PAGE TITLE -->
+      <div class="page-heading">
 
         <div>
-          <span class="badge">AI-Powered Real Estate Platform</span>
-
-          <h1>
-            Find Your Next
-            <span>Perfect Property.</span>
-          </h1>
+          <h2>Dashboard 👋</h2>
 
           <p>
-            Discover verified properties and trusted real estate
-            projects across Islamabad and Rawalpindi — powered by
-            smarter technology and real human expertise.
+            Welcome back, Hamza! Here's what's happening today.
+          </p>
+        </div>
+
+        <button class="today-button">
+          📅 Today
+        </button>
+
+      </div>
+
+
+
+      <!-- KPI CARDS -->
+      <section class="stats-grid">
+
+        <div class="stat-card">
+          <div class="stat-icon blue">👥</div>
+
+          <div>
+            <span>Total Leads</span>
+            <strong>128</strong>
+            <small>↑ 12% from yesterday</small>
+          </div>
+        </div>
+
+
+        <div class="stat-card">
+          <div class="stat-icon red">🔥</div>
+
+          <div>
+            <span>Hot Leads</span>
+            <strong>12</strong>
+            <small>High Priority</small>
+          </div>
+        </div>
+
+
+        <div class="stat-card">
+          <div class="stat-icon purple">✓</div>
+
+          <div>
+            <span>Follow Ups</span>
+            <strong>18</strong>
+            <small>Due Today</small>
+          </div>
+        </div>
+
+
+        <div class="stat-card">
+          <div class="stat-icon orange">📅</div>
+
+          <div>
+            <span>Site Visits</span>
+            <strong>4</strong>
+            <small>Today</small>
+          </div>
+        </div>
+
+
+        <div class="stat-card">
+          <div class="stat-icon green">Rs</div>
+
+          <div>
+            <span>Expected Commission</span>
+            <strong>PKR 12.5M</strong>
+            <small>This Month</small>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <!-- MAIN DASHBOARD GRID -->
+      <section class="dashboard-grid">
+
+
+        <!-- AI SMART MATCH -->
+        <div class="panel smart-match">
+
+          <div class="panel-heading">
+            <h3>AI Smart Match</h3>
+            <span>Top Recommendation</span>
+          </div>
+
+
+          <div class="match-content">
+
+            <div class="lead-info">
+
+              <span class="label">Lead</span>
+
+              <h3>Ahmed Khan</h3>
+
+              <span class="hot-tag">Hot</span>
+
+              <p>📍 Islamabad</p>
+              <p>🏠 Residential Plot</p>
+              <p>📐 10 Marla</p>
+              <p>💰 Budget: PKR 2 Crore</p>
+
+            </div>
+
+
+            <div class="property-card">
+
+              <span>Best Match</span>
+
+              <div class="property-image">
+                🏡
+              </div>
+
+              <h3>Faisal Town</h3>
+
+              <p>10 Marla Plot</p>
+              <p>Islamabad</p>
+
+              <strong>PKR 8,500,000</strong>
+
+              <small>Available</small>
+
+            </div>
+
+          </div>
+
+
+          <div class="match-bottom">
+
+            <div>
+              <span>Match Score</span>
+              <strong>98%</strong>
+            </div>
+
+            <div class="match-reasons">
+
+              <span>✓ Same Location</span>
+              <span>✓ Same Size</span>
+              <span>✓ Budget Match</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- LEADS STATUS -->
+        <div class="panel">
+
+          <div class="panel-heading">
+            <h3>Leads by Status</h3>
+          </div>
+
+
+          <div class="status-chart">
+
+            <div class="donut">
+              <div>
+                <strong>128</strong>
+                <span>Total</span>
+              </div>
+            </div>
+
+
+            <div class="status-list">
+
+              <div>
+                <span class="dot hot"></span>
+                <span>Hot</span>
+                <strong>12</strong>
+              </div>
+
+              <div>
+                <span class="dot warm"></span>
+                <span>Warm</span>
+                <strong>38</strong>
+              </div>
+
+              <div>
+                <span class="dot cold"></span>
+                <span>Cold</span>
+                <strong>78</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FOLLOW UPS -->
+        <div class="panel">
+
+          <div class="panel-heading">
+
+            <h3>Upcoming Follow Ups</h3>
+
+            <a href="#">View All</a>
+
+          </div>
+
+
+          <div class="follow-list">
+
+            <div>
+              <div class="avatar">U</div>
+              <section>
+                <strong>Usman Ali</strong>
+                <small>Follow up call</small>
+              </section>
+              <time>10:00 AM</time>
+            </div>
+
+
+            <div>
+              <div class="avatar">B</div>
+              <section>
+                <strong>Bilal Ahmed</strong>
+                <small>Property Visit</small>
+              </section>
+              <time>12:00 PM</time>
+            </div>
+
+
+            <div>
+              <div class="avatar">Z</div>
+              <section>
+                <strong>Zainab Malik</strong>
+                <small>Payment Discussion</small>
+              </section>
+              <time>03:00 PM</time>
+            </div>
+
+
+            <div>
+              <div class="avatar">A</div>
+              <section>
+                <strong>Ali Raza</strong>
+                <small>Documents</small>
+              </section>
+              <time>04:30 PM</time>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- LOWER SECTION -->
+      <section class="lower-grid">
+
+
+        <!-- RECENT LEADS -->
+        <div class="panel">
+
+          <div class="panel-heading">
+            <h3>Recent Leads</h3>
+            <a href="#">View All</a>
+          </div>
+
+
+          <div class="recent-leads">
+
+            <div>
+              <span class="mini-avatar">A</span>
+              <strong>Ahmed Khan</strong>
+              <span class="hot-tag">Hot</span>
+              <small>10 Marla Plot in Islamabad</small>
+              <time>2 min ago</time>
+            </div>
+
+            <div>
+              <span class="mini-avatar">U</span>
+              <strong>Usman Ali</strong>
+              <span class="warm-tag">Warm</span>
+              <small>5 Marla Plot in Rawalpindi</small>
+              <time>15 min ago</time>
+            </div>
+
+            <div>
+              <span class="mini-avatar">B</span>
+              <strong>Bilal Ahmed</strong>
+              <span class="hot-tag">Hot</span>
+              <small>Commercial Plot in Bahria</small>
+              <time>1 hour ago</time>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PROPERTIES -->
+        <div class="panel">
+
+          <div class="panel-heading">
+            <h3>Properties Overview</h3>
+            <a href="#">View All</a>
+          </div>
+
+
+          <div class="property-overview">
+
+            <div class="property-placeholder">
+              🏡
+            </div>
+
+            <div class="property-stats">
+
+              <p>🔵 Total Properties <strong>286</strong></p>
+
+              <p>🟢 Available <strong>152</strong></p>
+
+              <p>🟠 On Hold <strong>68</strong></p>
+
+              <p>🔴 Sold <strong>66</strong></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- AI ACTIVITY -->
+        <div class="panel">
+
+          <div class="panel-heading">
+            <h3>AI Activity Feed</h3>
+            <a href="#">View All</a>
+          </div>
+
+
+          <div class="activity-feed">
+
+            <p>
+              ✨ AI matched 3 properties for Ahmed Khan
+              <small>2 min ago</small>
+            </p>
+
+            <p>
+              💬 Follow up reminder sent to Usman Ali
+              <small>15 min ago</small>
+            </p>
+
+            <p>
+              👤 New lead Bilal Ahmed added
+              <small>1 hour ago</small>
+            </p>
+
+            <p>
+              📊 Daily report generated
+              <small>2 hours ago</small>
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- AI CALL TO ACTION -->
+      <section class="ai-banner">
+
+        <div>
+
+          <span>✨ ERealtor AI</span>
+
+          <h2>
+            Your intelligent real estate assistant.
+          </h2>
+
+          <p>
+            Manage leads, properties, follow-ups and marketing
+            from one smart platform.
           </p>
 
-          <div class="hero-buttons">
-            <a href="#properties" class="btn-primary">
-              Explore Properties
-            </a>
-
-            <a href="#projects" class="btn-secondary">
-              View Projects
-            </a>
-          </div>
         </div>
 
+        <button>
+          Open AI Assistant
+        </button>
 
-        <div class="hero-card">
+      </section>
 
-          <div class="property-image"></div>
 
-          <div class="property-info">
-            <h3>Featured Property</h3>
-            <p>10 Marla Residential Plot • Islamabad</p>
-            <div class="price">PKR 8.5 Crore</div>
-          </div>
 
-        </div>
+      <!-- FOOTER -->
+      <footer>
 
-      </div>
-    </section>
+        <strong>ERealtor</strong>
 
-
-    <!-- SEARCH -->
-    <div class="container search-box">
-
-      <div class="search-inner">
-
-        <input
-          type="text"
-          placeholder="Search location, project or property..."
-        >
-
-        <select>
-          <option>Property Type</option>
-          <option>Plot</option>
-          <option>House</option>
-          <option>Apartment</option>
-          <option>Commercial</option>
-        </select>
-
-        <select>
-          <option>Budget</option>
-          <option>Under 50 Lac</option>
-          <option>50 Lac - 1 Crore</option>
-          <option>1 - 5 Crore</option>
-          <option>5 Crore+</option>
-        </select>
-
-        <button>Search</button>
-
-      </div>
-
-    </div>
-
-
-    <!-- PROJECTS -->
-    <section id="projects">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <h2>Featured Projects</h2>
-            <p>
-              Explore trusted real estate projects and find the
-              right opportunity for your investment or dream home.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="cards">
-
-          <div class="card">
-            <div class="card-img faisal-town"></div>
-
-            <div class="card-content">
-              <h3>Faisal Town</h3>
-              <div class="location">
-                Islamabad
-              </div>
-              <p>
-                Residential plots and premium real estate
-                opportunities.
-              </p>
-
-              <br>
-
-              <a href="#" class="card-link">
-                Explore Project →
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="card-img faisal-hills"></div>
-
-            <div class="card-content">
-              <h3>Faisal Hills</h3>
-              <div class="location">
-                Islamabad / Rawalpindi
-              </div>
-              <p>
-                Modern residential investment opportunities.
-              </p>
-
-              <br>
-
-              <a href="#" class="card-link">
-                Explore Project →
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="card-img faisal-margalla"></div>
-
-            <div class="card-content">
-              <h3>Faisal Margalla City</h3>
-              <div class="location">
-                Islamabad
-              </div>
-              <p>
-                Discover residential plots and future
-                investment opportunities.
-              </p>
-
-              <br>
-
-              <a href="#" class="card-link">
-                Explore Project →
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- STATS -->
-    <div class="stats">
-
-      <div class="container stats-grid">
-
-        <div class="stat">
-          <h3>500+</h3>
-          <p>Active Clients</p>
-        </div>
-
-        <div class="stat">
-          <h3>100+</h3>
-          <p>Verified Listings</p>
-        </div>
-
-        <div class="stat">
-          <h3>4.9★</h3>
-          <p>Average Client Rating</p>
-        </div>
-
-        <div class="stat">
-          <h3>24/7</h3>
-          <p>AI Assistance</p>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- PROPERTIES -->
-    <section id="properties">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <h2>Featured Properties</h2>
-            <p>
-              Carefully selected properties for buyers and investors.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="cards">
-
-          <div class="card">
-            <div
-              class="card-img"
-              style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80');">
-            </div>
-
-            <div class="card-content">
-              <h3>10 Marla Residential Plot</h3>
-              <div class="location">
-                Faisal Town • Islamabad
-              </div>
-              <div class="price">PKR 8.5 Crore</div>
-              <br>
-              <a href="#" class="card-link">
-                View Details →
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div
-              class="card-img"
-              style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80');">
-            </div>
-
-            <div class="card-content">
-              <h3>5 Marla Residential Plot</h3>
-              <div class="location">
-                Faisal Town • Islamabad
-              </div>
-              <div class="price">PKR 95 Lac</div>
-              <br>
-              <a href="#" class="card-link">
-                View Details →
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div
-              class="card-img"
-              style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80');">
-            </div>
-
-            <div class="card-content">
-              <h3>Commercial Property</h3>
-              <div class="location">
-                Rawalpindi
-              </div>
-              <div class="price">Price on Request</div>
-              <br>
-              <a href="#" class="card-link">
-                View Details →
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- AI SMART MATCH -->
-    <section class="ai-section" id="ai">
-
-      <div class="container">
-
-        <div class="ai-box">
-
-          <div>
-
-            <span class="badge">ERealtor AI</span>
-
-            <h2>
-              Your Smart Real Estate Assistant
-            </h2>
-
-            <p>
-              Tell us what you are looking for and ERealtor AI
-              helps identify suitable property opportunities
-              based on location, size and budget.
-            </p>
-
-            <div class="ai-list">
-
-              <div class="ai-item">
-                ✓ Location Match
-              </div>
-
-              <div class="ai-item">
-                ✓ Property Size Match
-              </div>
-
-              <div class="ai-item">
-                ✓ Budget Match
-              </div>
-
-              <div class="ai-item">
-                ✓ Investment Opportunity
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="match-card">
-
-            <h3>AI Smart Match</h3>
-
-            <p style="color:#b8bdcc;margin-top:8px;">
-              Example recommendation
-            </p>
-
-            <h2 style="margin-top:18px;">
-              Ahmed Khan
-            </h2>
-
-            <p style="color:#b8bdcc;">
-              Residential Plot • 10 Marla • Islamabad
-            </p>
-
-            <div class="match-score">
-              98%
-            </div>
-
-            <p style="color:#b8bdcc;">
-              Match Score
-            </p>
-
-            <br>
-
-            <a href="#contact" class="btn-primary">
-              Find My Property
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CTA -->
-    <section class="cta" id="contact">
-
-      <div class="container">
-
-        <h2>Looking for the right property?</h2>
+        <span>
+          AI Real Estate OS
+        </span>
 
         <p>
-          Talk to ERealtor and let us help you find the right
-          opportunity.
+          © 2026 ERealtor. All rights reserved.
         </p>
 
-        <a
-          href="https://wa.me/923000148811"
-          class="btn-secondary">
-          Contact on WhatsApp
-        </a>
+      </footer>
 
-      </div>
+    </main>
 
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="container footer-grid">
-
-      <div>
-        <h3>ERealtor</h3>
-
-        <p>
-          AI-powered real estate platform helping buyers,
-          investors and property owners make smarter decisions.
-        </p>
-
-        <br>
-
-        <p>
-          Islamabad • Rawalpindi
-        </p>
-      </div>
-
-
-      <div>
-        <h3>Explore</h3>
-
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#properties">Properties</a>
-        <a href="#ai">AI Smart Match</a>
-      </div>
-
-
-      <div>
-        <h3>Contact</h3>
-
-        <a href="https://wa.me/923000148811">
-          WhatsApp
-        </a>
-
-        <a href="#">
-          Contact Us
-        </a>
-
-        <a href="#">
-          About ERealtor
-        </a>
-      </div>
-
-    </div>
-
-
-    <div class="container copyright">
-      © 2026 ERealtor. All rights reserved.
-    </div>
-
-  </footer>
+  </div>
 
 </body>
 </html>
