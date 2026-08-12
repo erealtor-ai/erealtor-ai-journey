@@ -1271,6 +1271,17 @@
   <script>
 
     document.addEventListener("DOMContentLoaded", function () {
+            // ERealtor API Connection Test
+      fetch("https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec?action=health")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log("ERealtor API:", data);
+        })
+        .catch(function (error) {
+          console.error("ERealtor API Connection Error:", error);
+        });
 
       const navItems = document.querySelectorAll(".nav-item");
 
