@@ -2,215 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>ERealtor | AI Real Estate OS</title>
 
   <meta
     name="description"
-    content="ERealtor AI — Intelligent Real Estate Operating System for leads, properties, follow-ups, marketing and smart property matching."
+    content="ERealtor AI-powered Real Estate Operating System for leads, properties, follow-ups, marketing and intelligent property matching."
   >
 
-  <meta name="theme-color" content="#0b1633">
-
-  <title>ERealtor AI | Real Estate OS</title>
-
   <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
 
-  <!-- =========================================
-       APP SHELL
-       ========================================= -->
-
   <div class="app-shell">
 
-    <!-- =======================================
+    <!-- =========================
          SIDEBAR
-         ======================================= -->
+    ========================== -->
 
     <aside class="sidebar">
 
-      <div class="sidebar-brand">
+      <div class="sidebar-top">
 
-        <div class="brand-mark">
-          E
+        <div class="brand">
+          <div class="brand-mark">E</div>
+
+          <div class="brand-text">
+            <div class="brand-name">ERealtor</div>
+            <div class="brand-subtitle">AI Real Estate OS</div>
+          </div>
         </div>
 
-        <div class="brand-copy">
-          <strong>ERealtor</strong>
-          <span>AI Real Estate OS</span>
-        </div>
+        <nav class="sidebar-nav">
+
+          <div class="nav-section-title">WORKSPACE</div>
+
+          <a href="#" class="nav-item active">
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">♙</span>
+            <span>Leads</span>
+            <span class="nav-badge">128</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⌂</span>
+            <span>Properties</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">◷</span>
+            <span>Follow Ups</span>
+            <span class="nav-badge">18</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">□</span>
+            <span>Calendar</span>
+          </a>
+
+          <a href="#" class="nav-item ai-nav-item">
+            <span class="nav-icon">✦</span>
+            <span>AI Assistant</span>
+          </a>
+
+
+          <div class="nav-section-title growth-title">GROWTH</div>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">◈</span>
+            <span>Marketing</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">▥</span>
+            <span>Reports</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙</span>
+            <span>Automation</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">◉</span>
+            <span>WhatsApp</span>
+          </a>
+
+
+          <div class="nav-section-title system-title">SYSTEM</div>
+
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+          </a>
+
+        </nav>
 
       </div>
 
 
-      <div class="sidebar-section-label">
-        WORKSPACE
-      </div>
+      <!-- AI ASSISTANT SIDEBAR CARD -->
 
+      <div class="sidebar-bottom">
 
-      <nav class="sidebar-nav">
+        <div class="sidebar-ai-card">
 
-        <a
-          href="#"
-          class="nav-item active"
-        >
-          <span class="nav-icon">⌂</span>
-          <span class="nav-text">Dashboard</span>
-        </a>
+          <div class="sidebar-ai-icon">✦</div>
 
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">◉</span>
-          <span class="nav-text">Leads</span>
-          <span class="nav-count">128</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">◇</span>
-          <span class="nav-text">Properties</span>
-          <span class="nav-count">286</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">✓</span>
-          <span class="nav-text">Follow Ups</span>
-          <span class="nav-count warning">18</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">□</span>
-          <span class="nav-text">Calendar</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon ai-icon">✦</span>
-          <span class="nav-text">AI Assistant</span>
-          <span class="nav-new">AI</span>
-        </a>
-
-
-        <div class="sidebar-section-label second">
-          GROWTH
-        </div>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">↗</span>
-          <span class="nav-text">Marketing</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">▥</span>
-          <span class="nav-text">Reports</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">⌘</span>
-          <span class="nav-text">Automation</span>
-        </a>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon whatsapp-icon">◌</span>
-          <span class="nav-text">WhatsApp</span>
-          <span class="nav-new green">LIVE</span>
-        </a>
-
-
-        <div class="sidebar-section-label second">
-          SYSTEM
-        </div>
-
-
-        <a href="#" class="nav-item">
-          <span class="nav-icon">⚙</span>
-          <span class="nav-text">Settings</span>
-        </a>
-
-      </nav>
-
-
-      <!-- =====================================
-           SIDEBAR AI CARD
-           ===================================== -->
-
-      <div class="sidebar-ai-card">
-
-        <div class="ai-card-top">
-
-          <div class="ai-orb">
-            ✦
+          <div class="sidebar-ai-title">
+            AI Assistant
           </div>
 
-          <span class="online-dot"></span>
+          <p>
+            Ask anything about your real estate business...
+          </p>
+
+          <button class="sidebar-ai-button">
+            Chat Now
+            <span>→</span>
+          </button>
 
         </div>
 
 
-        <strong>
-          ERealtor AI
-        </strong>
+        <div class="sidebar-footer">
 
+          <div class="user-mini">
 
-        <p>
-          Your intelligent real estate assistant is ready.
-        </p>
+            <div class="user-avatar">
+              HS
+            </div>
 
+            <div class="user-mini-info">
+              <strong>Hamza Soomro</strong>
+              <span>Administrator</span>
+            </div>
 
-        <button class="sidebar-ai-button">
-          Open Assistant
-          <span>→</span>
-        </button>
+          </div>
 
-      </div>
-
-
-      <div class="sidebar-footer">
-
-        <div class="sidebar-user-avatar">
-          HS
         </div>
-
-        <div class="sidebar-user-copy">
-          <strong>Hamza Soomro</strong>
-          <span>Administrator</span>
-        </div>
-
-        <span class="sidebar-more">•••</span>
 
       </div>
 
     </aside>
 
 
-    <!-- =======================================
+    <!-- =========================
          MAIN AREA
-         ======================================= -->
+    ========================== -->
 
     <main class="main-area">
 
-      <!-- =====================================
-           TOP HEADER
-           ===================================== -->
+
+      <!-- =========================
+           HEADER
+      ========================== -->
 
       <header class="top-header">
 
         <div class="mobile-brand">
-          <div class="brand-mark small">
-            E
-          </div>
-
+          <div class="brand-mark">E</div>
           <strong>ERealtor</strong>
         </div>
 
@@ -222,6 +193,7 @@
           <input
             type="text"
             placeholder="Search leads, properties, contacts..."
+            aria-label="Search"
           >
 
           <span class="search-shortcut">
@@ -231,50 +203,42 @@
         </div>
 
 
-        <div class="header-right">
+        <div class="header-actions">
 
-          <button
-            class="header-icon-button"
-            aria-label="Add"
-          >
-            +
+          <button class="header-action-button add-button">
+            <span>+</span>
+            <span class="add-label">Add</span>
           </button>
 
-
           <button
-            class="header-icon-button"
-            aria-label="Messages"
-          >
-            ◌
-          </button>
-
-
-          <button
-            class="header-icon-button notification"
+            class="header-action-button"
             aria-label="Notifications"
           >
-            ♢
-            <span></span>
+            ◌
+            <span class="notification-dot"></span>
           </button>
 
+          <button
+            class="header-action-button"
+            aria-label="Help"
+          >
+            ?
+          </button>
 
           <div class="header-divider"></div>
 
+          <div class="header-profile">
 
-          <div class="header-user">
-
-            <div class="header-avatar">
+            <div class="profile-avatar">
               HS
             </div>
 
-            <div class="header-user-copy">
-              <strong>Hamza Soomro</strong>
+            <div class="profile-info">
+              <strong>Hamza</strong>
               <span>Admin</span>
             </div>
 
-            <span class="header-chevron">
-              ▾
-            </span>
+            <span class="profile-arrow">⌄</span>
 
           </div>
 
@@ -283,177 +247,171 @@
       </header>
 
 
-      <!-- =====================================
-           CONTENT
-           ===================================== -->
+      <!-- =========================
+           DASHBOARD CONTENT
+      ========================== -->
 
-      <div class="content-area">
+      <section class="dashboard-content">
 
-        <!-- PAGE HEADER -->
 
-        <section class="page-header">
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
 
           <div>
 
-            <div class="eyebrow">
-              <span class="live-indicator"></span>
-              REAL ESTATE OPERATING SYSTEM
+            <div class="page-title-row">
+              <h1>Dashboard</h1>
+              <span class="greeting-icon">👋</span>
             </div>
 
-            <h1>
-              Good morning, Hamza.
-            </h1>
-
             <p>
-              Here's what's happening across your real estate business today.
+              Welcome back, Hamza! Here's what's happening today.
             </p>
 
           </div>
 
 
-          <div class="page-actions">
+          <div class="date-selector">
 
-            <button class="outline-button">
-              <span>□</span>
-              Today
-              <span>⌄</span>
-            </button>
+            <span class="calendar-icon">□</span>
 
+            <div>
+              <span class="date-label">TODAY</span>
+              <strong>12 August 2026</strong>
+            </div>
 
-            <button class="primary-button">
-              <span>+</span>
-              Add Lead
-            </button>
+            <span class="date-arrow">⌄</span>
 
           </div>
 
-        </section>
+        </div>
 
 
-        <!-- ===================================
-             KPI GRID
-             =================================== -->
+        <!-- =========================
+             KPI CARDS
+        ========================== -->
 
-        <section class="kpi-grid">
+        <div class="kpi-grid">
 
 
-          <article class="kpi-card">
+          <div class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon blue">
-                ◉
+                ♙
               </div>
 
-              <span class="trend positive">
-                ↑ 12.4%
+              <span class="kpi-trend positive">
+                ↑ 12.5%
               </span>
 
             </div>
 
-            <span class="kpi-label">
+            <div class="kpi-label">
               Total Leads
-            </span>
+            </div>
 
-            <strong class="kpi-value">
+            <div class="kpi-value">
               128
-            </strong>
+            </div>
 
-            <span class="kpi-note">
-              vs. yesterday
-            </span>
+            <div class="kpi-footer">
+              <span>vs. last month</span>
+            </div>
 
-          </article>
+          </div>
 
 
-          <article class="kpi-card">
+          <div class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon red">
-                ✦
+                ♨
               </div>
 
-              <span class="trend positive">
-                +4
+              <span class="kpi-trend positive">
+                ↑ 8.3%
               </span>
 
             </div>
 
-            <span class="kpi-label">
+            <div class="kpi-label">
               Hot Leads
-            </span>
-
-            <strong class="kpi-value">
-              12
-            </strong>
-
-            <span class="kpi-note">
-              high priority
-            </span>
-
-          </article>
-
-
-          <article class="kpi-card">
-
-            <div class="kpi-top">
-
-              <div class="kpi-icon purple">
-                ✓
-              </div>
-
-              <span class="trend warning">
-                6 due
-              </span>
-
             </div>
 
-            <span class="kpi-label">
-              Follow Ups
-            </span>
+            <div class="kpi-value">
+              12
+            </div>
 
-            <strong class="kpi-value">
-              18
-            </strong>
+            <div class="kpi-footer">
+              <span>Ready for action</span>
+            </div>
 
-            <span class="kpi-note">
-              scheduled today
-            </span>
-
-          </article>
+          </div>
 
 
-          <article class="kpi-card">
+          <div class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon orange">
-                □
+                ◷
               </div>
 
-              <span class="trend positive">
-                +2
+              <span class="kpi-trend warning">
+                5 due today
               </span>
 
             </div>
 
-            <span class="kpi-label">
+            <div class="kpi-label">
+              Follow Ups
+            </div>
+
+            <div class="kpi-value">
+              18
+            </div>
+
+            <div class="kpi-footer">
+              <span>Upcoming actions</span>
+            </div>
+
+          </div>
+
+
+          <div class="kpi-card">
+
+            <div class="kpi-top">
+
+              <div class="kpi-icon purple">
+                ◉
+              </div>
+
+              <span class="kpi-trend positive">
+                ↑ 2 this week
+              </span>
+
+            </div>
+
+            <div class="kpi-label">
               Site Visits
-            </span>
+            </div>
 
-            <strong class="kpi-value">
+            <div class="kpi-value">
               4
-            </strong>
+            </div>
 
-            <span class="kpi-note">
-              scheduled today
-            </span>
+            <div class="kpi-footer">
+              <span>Scheduled visits</span>
+            </div>
 
-          </article>
+          </div>
 
 
-          <article class="kpi-card commission-card">
+          <div class="kpi-card commission-card">
 
             <div class="kpi-top">
 
@@ -461,271 +419,193 @@
                 ₨
               </div>
 
-              <span class="trend positive">
-                ↑ 18.6%
+              <span class="kpi-trend positive">
+                ↑ 18.7%
               </span>
 
             </div>
 
-            <span class="kpi-label">
+            <div class="kpi-label">
               Expected Commission
-            </span>
+            </div>
 
-            <strong class="kpi-value commission">
+            <div class="kpi-value commission-value">
               PKR 12.5M
-            </strong>
-
-            <span class="kpi-note">
-              this month
-            </span>
-
-          </article>
-
-
-        </section>
-
-
-        <!-- ===================================
-             AI HERO
-             =================================== -->
-
-        <section class="ai-hero">
-
-          <div class="ai-hero-glow"></div>
-
-          <div class="ai-hero-content">
-
-            <div class="ai-hero-badge">
-              <span>✦</span>
-              EREALTOR AI
             </div>
 
-
-            <h2>
-              Your intelligent real estate assistant.
-            </h2>
-
-
-            <p>
-              Match leads with properties, automate follow-ups,
-              generate marketing and keep your business moving.
-            </p>
-
-
-            <div class="ai-hero-actions">
-
-              <button class="hero-primary">
-                Open AI Assistant
-                <span>→</span>
-              </button>
-
-
-              <button class="hero-secondary">
-                View AI Activity
-              </button>
-
+            <div class="kpi-footer">
+              <span>Pipeline estimate</span>
             </div>
 
           </div>
 
-
-          <div class="ai-hero-visual">
-
-            <div class="ai-ring ring-one"></div>
-            <div class="ai-ring ring-two"></div>
-
-            <div class="ai-center-orb">
-              ✦
-            </div>
-
-            <div class="floating-ai-card card-one">
-              <span>AI MATCH</span>
-              <strong>98%</strong>
-            </div>
-
-            <div class="floating-ai-card card-two">
-              <span>LEADS</span>
-              <strong>+12</strong>
-            </div>
-
-          </div>
-
-        </section>
+        </div>
 
 
-        <!-- ===================================
-             PRIMARY DASHBOARD
-             =================================== -->
+        <!-- =========================
+             FIRST CONTENT ROW
+        ========================== -->
 
-        <section class="primary-grid">
+        <div class="dashboard-grid three-column">
 
 
           <!-- AI SMART MATCH -->
 
-          <article class="dashboard-card smart-match-card">
+          <section class="dashboard-card smart-match-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  AI POWERED
-                </span>
+                <div class="card-title-with-icon">
 
-                <h3>
-                  Smart Property Match
-                </h3>
+                  <div class="card-title-icon ai-icon">
+                    ✦
+                  </div>
+
+                  <div>
+                    <h2>AI Smart Match</h2>
+                    <span>Intelligent property recommendation</span>
+                  </div>
+
+                </div>
 
               </div>
 
-              <button class="card-action">
-                View All →
-              </button>
+              <button class="more-button">•••</button>
 
             </div>
 
 
-            <div class="smart-match-body">
+            <div class="match-lead">
 
-              <div class="match-lead">
+              <div class="match-person">
 
-                <div class="profile-row">
-
-                  <div class="profile-avatar purple-avatar">
-                    AK
-                  </div>
-
-                  <div>
-                    <strong>Ahmed Khan</strong>
-                    <span>Hot Buyer · 2 min ago</span>
-                  </div>
-
-                  <span class="hot-badge">
-                    HOT
-                  </span>
-
+                <div class="person-avatar">
+                  AK
                 </div>
 
-
-                <div class="requirement-title">
-                  Looking for
+                <div>
+                  <strong>Ahmed Khan</strong>
+                  <span>Hot Lead • Islamabad</span>
                 </div>
-
-
-                <div class="requirements">
-
-                  <div>
-                    <span>Location</span>
-                    <strong>Islamabad</strong>
-                  </div>
-
-                  <div>
-                    <span>Property</span>
-                    <strong>Residential Plot</strong>
-                  </div>
-
-                  <div>
-                    <span>Size</span>
-                    <strong>10 Marla</strong>
-                  </div>
-
-                  <div>
-                    <span>Budget</span>
-                    <strong>PKR 2 Crore</strong>
-                  </div>
-
-                </div>
-
-
-                <button class="view-lead-button">
-                  View Lead Profile →
-                </button>
 
               </div>
 
+              <span class="hot-pill">
+                HOT
+              </span>
 
-              <div class="match-property">
+            </div>
 
-                <div class="match-image">
 
-                  <div class="image-overlay"></div>
+            <div class="match-request">
 
-                  <span class="match-label">
-                    98% MATCH
-                  </span>
+              <div class="request-label">
+                LOOKING FOR
+              </div>
 
-                  <div class="property-building">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
+              <div class="request-details">
 
+                <div>
+                  <strong>Residential Plot</strong>
+                  <span>10 Marla</span>
                 </div>
 
-
-                <div class="match-property-info">
-
-                  <div>
-
-                    <span class="property-developer">
-                      Zedem International
-                    </span>
-
-                    <h4>
-                      Faisal Town
-                    </h4>
-
-                    <p>
-                      Islamabad · 10 Marla Residential Plot
-                    </p>
-
-                  </div>
-
-
-                  <div class="property-price">
-                    <strong>PKR 85 Lac</strong>
-                    <span>Available</span>
-                  </div>
-
-                </div>
-
-
-                <div class="match-reasons">
-
-                  <span>✓ Location</span>
-                  <span>✓ Size</span>
-                  <span>✓ Budget</span>
-
+                <div>
+                  <strong>PKR 2 Crore</strong>
+                  <span>Budget</span>
                 </div>
 
               </div>
 
             </div>
 
-          </article>
+
+            <div class="match-divider"></div>
 
 
-          <!-- LEADS STATUS -->
+            <div class="recommended-property">
 
-          <article class="dashboard-card status-card">
+              <div class="recommended-label">
+                RECOMMENDED PROPERTY
+              </div>
+
+              <div class="property-name">
+                Faisal Town
+              </div>
+
+              <div class="property-details">
+                <span>10 Marla Plot</span>
+                <span>•</span>
+                <span>Islamabad</span>
+              </div>
+
+              <div class="property-price">
+                PKR 8,500,000
+                <span>Available</span>
+              </div>
+
+            </div>
+
+
+            <div class="match-score-row">
+
+              <div class="match-score">
+
+                <div class="score-circle">
+                  <strong>98%</strong>
+                </div>
+
+                <div>
+                  <strong>Match Score</strong>
+                  <span>Excellent match</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="match-reasons">
+
+              <span>
+                ✓ Same Location
+              </span>
+
+              <span>
+                ✓ Same Size
+              </span>
+
+              <span>
+                ✓ Budget Match
+              </span>
+
+            </div>
+
+
+            <button class="primary-card-button">
+              View Property
+              <span>→</span>
+            </button>
+
+          </section>
+
+
+          <!-- LEADS BY STATUS -->
+
+          <section class="dashboard-card status-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  CRM OVERVIEW
-                </span>
-
-                <h3>
-                  Leads by Status
-                </h3>
+                <h2>Leads by Status</h2>
+                <span>Current lead distribution</span>
 
               </div>
 
-              <button class="more-button">
-                •••
-              </button>
+              <button class="more-button">•••</button>
 
             </div>
 
@@ -735,53 +615,47 @@
               <div class="donut-chart">
 
                 <div class="donut-center">
+
                   <strong>128</strong>
                   <span>Total Leads</span>
+
                 </div>
 
               </div>
 
 
-              <div class="status-legend">
+              <div class="status-list">
 
-                <div class="legend-row">
+                <div class="status-item">
 
-                  <span class="legend-color hot"></span>
-
-                  <div>
-                    <strong>12</strong>
-                    <span>Hot Leads</span>
+                  <div class="status-name">
+                    <span class="status-dot hot"></span>
+                    Hot
                   </div>
 
-                  <small>9%</small>
+                  <strong>12</strong>
 
                 </div>
 
+                <div class="status-item">
 
-                <div class="legend-row">
-
-                  <span class="legend-color warm"></span>
-
-                  <div>
-                    <strong>38</strong>
-                    <span>Warm Leads</span>
+                  <div class="status-name">
+                    <span class="status-dot warm"></span>
+                    Warm
                   </div>
 
-                  <small>30%</small>
+                  <strong>38</strong>
 
                 </div>
 
+                <div class="status-item">
 
-                <div class="legend-row">
-
-                  <span class="legend-color cold"></span>
-
-                  <div>
-                    <strong>78</strong>
-                    <span>Cold Leads</span>
+                  <div class="status-name">
+                    <span class="status-dot cold"></span>
+                    Cold
                   </div>
 
-                  <small>61%</small>
+                  <strong>78</strong>
 
                 </div>
 
@@ -789,148 +663,182 @@
 
             </div>
 
-          </article>
+
+            <div class="status-progress">
+
+              <div
+                class="progress-hot"
+                style="width: 9.4%;"
+              ></div>
+
+              <div
+                class="progress-warm"
+                style="width: 29.7%;"
+              ></div>
+
+              <div
+                class="progress-cold"
+                style="width: 60.9%;"
+              ></div>
+
+            </div>
 
 
-          <!-- FOLLOW UPS -->
+            <button class="text-button">
+              View All Leads
+              <span>→</span>
+            </button>
 
-          <article class="dashboard-card follow-card">
+          </section>
+
+
+          <!-- UPCOMING FOLLOW UPS -->
+
+          <section class="dashboard-card followup-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  TODAY
-                </span>
-
-                <h3>
-                  Upcoming Follow Ups
-                </h3>
+                <h2>Upcoming Follow Ups</h2>
+                <span>Your next actions</span>
 
               </div>
 
-              <button class="card-action">
-                View All →
-              </button>
+              <button class="more-button">•••</button>
 
             </div>
 
 
-            <div class="follow-items">
+            <div class="followup-list">
 
 
-              <div class="follow-item">
+              <div class="followup-item">
 
-                <div class="follow-avatar">
-                  UA
+                <div class="followup-icon call">
+                  ☎
                 </div>
 
-                <div class="follow-copy">
+                <div class="followup-info">
+
                   <strong>Usman Ali</strong>
-                  <span>Follow-up call</span>
+
+                  <span>
+                    Follow up call
+                  </span>
+
                 </div>
 
-                <div class="follow-time">
-                  <strong>10:00</strong>
-                  <span>AM</span>
+                <div class="followup-time">
+                  10:00 AM
                 </div>
 
               </div>
 
 
-              <div class="follow-item">
+              <div class="followup-item">
 
-                <div class="follow-avatar blue-avatar">
-                  BA
+                <div class="followup-icon visit">
+                  ◉
                 </div>
 
-                <div class="follow-copy">
+                <div class="followup-info">
+
                   <strong>Bilal Ahmed</strong>
-                  <span>Property visit</span>
+
+                  <span>
+                    Property Visit
+                  </span>
+
                 </div>
 
-                <div class="follow-time">
-                  <strong>12:00</strong>
-                  <span>PM</span>
+                <div class="followup-time">
+                  12:00 PM
                 </div>
 
               </div>
 
 
-              <div class="follow-item">
+              <div class="followup-item">
 
-                <div class="follow-avatar orange-avatar">
-                  ZM
+                <div class="followup-icon payment">
+                  ₨
                 </div>
 
-                <div class="follow-copy">
+                <div class="followup-info">
+
                   <strong>Zainab Malik</strong>
-                  <span>Payment discussion</span>
+
+                  <span>
+                    Payment Discussion
+                  </span>
+
                 </div>
 
-                <div class="follow-time">
-                  <strong>03:00</strong>
-                  <span>PM</span>
+                <div class="followup-time">
+                  03:00 PM
                 </div>
 
               </div>
 
 
-              <div class="follow-item">
+              <div class="followup-item">
 
-                <div class="follow-avatar green-avatar">
-                  AR
+                <div class="followup-icon document">
+                  □
                 </div>
 
-                <div class="follow-copy">
+                <div class="followup-info">
+
                   <strong>Ali Raza</strong>
-                  <span>Documents</span>
+
+                  <span>
+                    Documents
+                  </span>
+
                 </div>
 
-                <div class="follow-time">
-                  <strong>04:30</strong>
-                  <span>PM</span>
+                <div class="followup-time">
+                  04:30 PM
                 </div>
 
               </div>
-
 
             </div>
 
-          </article>
+
+            <button class="text-button">
+              Open Follow Ups
+              <span>→</span>
+            </button>
+
+          </section>
+
+        </div>
 
 
-        </section>
+        <!-- =========================
+             SECOND CONTENT ROW
+        ========================== -->
 
-
-        <!-- ===================================
-             SECONDARY GRID
-             =================================== -->
-
-        <section class="secondary-grid">
+        <div class="dashboard-grid three-column">
 
 
           <!-- RECENT LEADS -->
 
-          <article class="dashboard-card">
+          <section class="dashboard-card recent-leads-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  CRM
-                </span>
-
-                <h3>
-                  Recent Leads
-                </h3>
+                <h2>Recent Leads</h2>
+                <span>Latest activity in your CRM</span>
 
               </div>
 
-              <button class="card-action">
-                View All →
+              <button class="text-button small">
+                View All
               </button>
 
             </div>
@@ -938,12 +846,10 @@
 
             <div class="lead-table">
 
-
-              <div class="lead-table-header">
+              <div class="lead-table-head">
                 <span>LEAD</span>
-                <span>INTEREST</span>
                 <span>STATUS</span>
-                <span>TIME</span>
+                <span>REQUIREMENT</span>
               </div>
 
 
@@ -951,28 +857,25 @@
 
                 <div class="lead-person">
 
-                  <div class="table-avatar">
+                  <div class="table-avatar avatar-blue">
                     AK
                   </div>
 
                   <div>
                     <strong>Ahmed Khan</strong>
-                    <span>Islamabad</span>
+                    <span>Today, 09:42 AM</span>
                   </div>
 
                 </div>
 
-                <span>
-                  10 Marla Plot
-                </span>
-
-                <span class="status-pill hot">
+                <span class="status-pill hot-pill">
                   Hot
                 </span>
 
-                <time>
-                  2 min
-                </time>
+                <span class="lead-requirement">
+                  10 Marla Plot<br>
+                  Islamabad
+                </span>
 
               </div>
 
@@ -981,28 +884,25 @@
 
                 <div class="lead-person">
 
-                  <div class="table-avatar blue">
+                  <div class="table-avatar avatar-purple">
                     UA
                   </div>
 
                   <div>
                     <strong>Usman Ali</strong>
-                    <span>Rawalpindi</span>
+                    <span>Today, 08:25 AM</span>
                   </div>
 
                 </div>
 
-                <span>
-                  5 Marla Plot
-                </span>
-
-                <span class="status-pill warm">
+                <span class="status-pill warm-pill">
                   Warm
                 </span>
 
-                <time>
-                  15 min
-                </time>
+                <span class="lead-requirement">
+                  5 Marla Plot<br>
+                  Rawalpindi
+                </span>
 
               </div>
 
@@ -1011,109 +911,104 @@
 
                 <div class="lead-person">
 
-                  <div class="table-avatar orange">
+                  <div class="table-avatar avatar-green">
                     BA
                   </div>
 
                   <div>
                     <strong>Bilal Ahmed</strong>
-                    <span>Islamabad</span>
+                    <span>Yesterday, 05:18 PM</span>
                   </div>
 
                 </div>
 
-                <span>
-                  Commercial
-                </span>
-
-                <span class="status-pill hot">
+                <span class="status-pill hot-pill">
                   Hot
                 </span>
 
-                <time>
-                  1 hr
-                </time>
+                <span class="lead-requirement">
+                  Commercial Plot<br>
+                  Bahria
+                </span>
 
               </div>
 
-
             </div>
 
-          </article>
+          </section>
 
 
-          <!-- PROPERTY OVERVIEW -->
+          <!-- PROPERTIES OVERVIEW -->
 
-          <article class="dashboard-card">
+          <section class="dashboard-card properties-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  INVENTORY
-                </span>
-
-                <h3>
-                  Properties Overview
-                </h3>
+                <h2>Properties Overview</h2>
+                <span>Your current inventory</span>
 
               </div>
 
-              <button class="card-action">
-                View All →
-              </button>
+              <button class="more-button">•••</button>
 
             </div>
 
 
-            <div class="property-overview-body">
+            <div class="property-total">
 
-              <div class="property-visual">
-
-                <div class="property-house">
-                  <div class="roof"></div>
-                  <div class="house-body">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-
+              <div>
+                <span>Total Properties</span>
+                <strong>286</strong>
               </div>
 
+              <div class="property-growth">
+                +14 this month
+              </div>
 
-              <div class="inventory-list">
+            </div>
 
-                <div>
-                  <span>
-                    <i class="inventory-dot blue"></i>
-                    Total Properties
-                  </span>
-                  <strong>286</strong>
+
+            <div class="property-stats">
+
+              <div class="property-stat">
+
+                <div class="property-stat-icon available">
+                  ✓
                 </div>
 
                 <div>
-                  <span>
-                    <i class="inventory-dot green"></i>
-                    Available
-                  </span>
                   <strong>152</strong>
+                  <span>Available</span>
+                </div>
+
+              </div>
+
+
+              <div class="property-stat">
+
+                <div class="property-stat-icon hold">
+                  ◷
                 </div>
 
                 <div>
-                  <span>
-                    <i class="inventory-dot orange"></i>
-                    On Hold
-                  </span>
                   <strong>68</strong>
+                  <span>On Hold</span>
+                </div>
+
+              </div>
+
+
+              <div class="property-stat">
+
+                <div class="property-stat-icon sold">
+                  ✓
                 </div>
 
                 <div>
-                  <span>
-                    <i class="inventory-dot red"></i>
-                    Sold
-                  </span>
                   <strong>66</strong>
+                  <span>Sold</span>
                 </div>
 
               </div>
@@ -1121,38 +1016,58 @@
             </div>
 
 
-            <div class="inventory-progress">
+            <div class="inventory-bar">
 
-              <span style="width: 53%"></span>
-              <span style="width: 24%"></span>
-              <span style="width: 23%"></span>
+              <span
+                class="inventory-available"
+                style="width: 53.1%;"
+              ></span>
+
+              <span
+                class="inventory-hold"
+                style="width: 23.8%;"
+              ></span>
+
+              <span
+                class="inventory-sold"
+                style="width: 23.1%;"
+              ></span>
 
             </div>
 
-          </article>
+
+            <button class="text-button">
+              Manage Properties
+              <span>→</span>
+            </button>
+
+          </section>
 
 
           <!-- AI ACTIVITY -->
 
-          <article class="dashboard-card">
+          <section class="dashboard-card activity-card">
 
             <div class="card-header">
 
               <div>
 
-                <span class="card-eyebrow">
-                  AUTOMATION
-                </span>
+                <div class="card-title-with-icon">
 
-                <h3>
-                  AI Activity
-                </h3>
+                  <div class="card-title-icon small-ai">
+                    ✦
+                  </div>
+
+                  <div>
+                    <h2>AI Activity</h2>
+                    <span>Latest intelligent actions</span>
+                  </div>
+
+                </div>
 
               </div>
 
-              <span class="live-badge">
-                ● LIVE
-              </span>
+              <button class="more-button">•••</button>
 
             </div>
 
@@ -1160,261 +1075,252 @@
             <div class="activity-list">
 
 
-              <div class="activity-row">
+              <div class="activity-item">
 
-                <div class="activity-icon purple">
+                <div class="activity-marker blue-marker">
                   ✦
                 </div>
 
-                <div>
+                <div class="activity-info">
+
                   <strong>
-                    3 properties matched
+                    AI matched 3 properties
                   </strong>
 
                   <span>
-                    AI found matches for Ahmed Khan
+                    for Ahmed Khan
                   </span>
 
                   <small>
-                    2 min ago
+                    4 minutes ago
                   </small>
+
                 </div>
 
               </div>
 
 
-              <div class="activity-row">
+              <div class="activity-item">
 
-                <div class="activity-icon green">
+                <div class="activity-marker green-marker">
                   ✓
                 </div>
 
-                <div>
+                <div class="activity-info">
+
                   <strong>
                     Follow-up reminder sent
                   </strong>
 
                   <span>
-                    WhatsApp notification delivered
+                    to Usman Ali
                   </span>
 
                   <small>
-                    15 min ago
+                    18 minutes ago
                   </small>
+
                 </div>
 
               </div>
 
 
-              <div class="activity-row">
+              <div class="activity-item">
 
-                <div class="activity-icon blue">
+                <div class="activity-marker purple-marker">
                   +
                 </div>
 
-                <div>
+                <div class="activity-info">
+
                   <strong>
                     New lead added
                   </strong>
 
                   <span>
-                    Bilal Ahmed entered CRM
+                    Bilal Ahmed
                   </span>
 
                   <small>
-                    1 hour ago
+                    42 minutes ago
                   </small>
+
                 </div>
 
               </div>
 
 
-              <div class="activity-row">
+              <div class="activity-item">
 
-                <div class="activity-icon orange">
-                  ▥
+                <div class="activity-marker orange-marker">
+                  ▣
                 </div>
 
-                <div>
+                <div class="activity-info">
+
                   <strong>
                     Daily report generated
                   </strong>
 
                   <span>
-                    Performance summary is ready
+                    ERealtor AI
                   </span>
 
                   <small>
-                    2 hours ago
+                    1 hour ago
                   </small>
+
                 </div>
 
               </div>
 
-
             </div>
 
-          </article>
+
+            <button class="text-button">
+              View AI Activity
+              <span>→</span>
+            </button>
+
+          </section>
+
+        </div>
 
 
-        </section>
+        <!-- =========================
+             AI BANNER
+        ========================== -->
 
+        <section class="ai-banner">
 
-        <!-- ===================================
-             QUICK ACTIONS
-             =================================== -->
+          <div class="ai-banner-glow"></div>
 
-        <section class="quick-section">
+          <div class="ai-banner-content">
 
-          <div class="section-heading">
+            <div class="ai-banner-icon">
+              ✦
+            </div>
 
             <div>
-              <span class="card-eyebrow">
-                QUICK ACTIONS
-              </span>
 
-              <h3>
-                Run your business faster
-              </h3>
+              <div class="ai-banner-label">
+                EREALTOR AI
+              </div>
+
+              <h2>
+                Your intelligent real estate assistant.
+              </h2>
+
+              <p>
+                Manage leads, properties, follow-ups and marketing
+                from one smart platform.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="quick-grid">
-
-
-            <button class="quick-card">
-
-              <span class="quick-icon blue">
-                +
-              </span>
-
-              <div>
-                <strong>Add New Lead</strong>
-                <span>Create CRM record</span>
-              </div>
-
-              <b>→</b>
-
-            </button>
-
-
-            <button class="quick-card">
-
-              <span class="quick-icon purple">
-                ✦
-              </span>
-
-              <div>
-                <strong>AI Property Match</strong>
-                <span>Find best property</span>
-              </div>
-
-              <b>→</b>
-
-            </button>
-
-
-            <button class="quick-card">
-
-              <span class="quick-icon green">
-                ✓
-              </span>
-
-              <div>
-                <strong>Follow-up Center</strong>
-                <span>Manage today's tasks</span>
-              </div>
-
-              <b>→</b>
-
-            </button>
-
-
-            <button class="quick-card">
-
-              <span class="quick-icon orange">
-                ↗
-              </span>
-
-              <div>
-                <strong>Create Marketing</strong>
-                <span>Generate campaign</span>
-              </div>
-
-              <b>→</b>
-
-            </button>
-
-
-          </div>
+          <button class="ai-banner-button">
+            Open AI Assistant
+            <span>→</span>
+          </button>
 
         </section>
 
 
-        <!-- ===================================
+        <!-- =========================
              FOOTER
-             =================================== -->
+        ========================== -->
 
-        <footer class="site-footer">
+        <footer class="dashboard-footer">
 
-          <div class="footer-brand">
-            <span class="footer-mark">E</span>
-            <strong>ERealtor</strong>
-            <span>AI Real Estate OS</span>
+          <div>
+            © 2026 ERealtor AI. All rights reserved.
           </div>
 
-          <div class="footer-right">
-            <span>System Status</span>
-            <i class="footer-status"></i>
-            <span>All systems operational</span>
-            <span class="footer-copy">
-              © 2026 ERealtor
-            </span>
+          <div class="footer-links">
+
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Support</a>
+
+          </div>
+
+          <div class="footer-status">
+
+            <span class="online-dot"></span>
+
+            All systems operational
+
           </div>
 
         </footer>
 
-      </div>
+      </section>
 
     </main>
 
   </div>
 
 
-  <!-- =========================================
-       MOBILE BOTTOM NAV
-       ========================================= -->
+  <!-- =========================
+       BASIC INTERACTION
+  ========================== -->
 
-  <nav class="mobile-nav">
+  <script>
 
-    <a href="#" class="active">
-      <span>⌂</span>
-      Home
-    </a>
+    document.addEventListener("DOMContentLoaded", function () {
 
-    <a href="#">
-      <span>◉</span>
-      Leads
-    </a>
+      const navItems = document.querySelectorAll(".nav-item");
 
-    <a href="#">
-      <span>◇</span>
-      Properties
-    </a>
+      navItems.forEach(function (item) {
 
-    <a href="#">
-      <span>✦</span>
-      AI
-    </a>
+        item.addEventListener("click", function (event) {
 
-    <a href="#">
-      <span>☰</span>
-      More
-    </a>
+          event.preventDefault();
 
-  </nav>
+          navItems.forEach(function (nav) {
+            nav.classList.remove("active");
+          });
+
+          item.classList.add("active");
+
+        });
+
+      });
+
+
+      const addButton = document.querySelector(".add-button");
+
+      if (addButton) {
+
+        addButton.addEventListener("click", function () {
+
+          alert("ERealtor Add menu — functionality coming soon.");
+
+        });
+
+      }
+
+
+      const chatButtons = document.querySelectorAll(
+        ".sidebar-ai-button, .ai-banner-button"
+      );
+
+      chatButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+          alert("ERealtor AI Assistant — coming soon.");
+
+        });
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
