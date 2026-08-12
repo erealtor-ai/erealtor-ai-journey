@@ -1379,6 +1379,139 @@
 
   });
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ==========================================
+  // EREALTOR API
+  // ==========================================
+
+  const API_URL =
+    "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
+
+
+  // ==========================================
+  // SIDEBAR NAVIGATION
+  // ==========================================
+
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach(function (item) {
+
+    item.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      navItems.forEach(function (nav) {
+        nav.classList.remove("active");
+      });
+
+      item.classList.add("active");
+
+    });
+
+  });
+
+
+  // ==========================================
+  // ADD BUTTON
+  // ==========================================
+
+  const addButton = document.querySelector(".add-button");
+
+  if (addButton) {
+
+    addButton.addEventListener("click", function () {
+
+      alert(
+        "ERealtor Add menu — functionality coming soon."
+      );
+
+    });
+
+  }
+
+
+  // ==========================================
+  // AI ASSISTANT BUTTONS
+  // ==========================================
+
+  const chatButtons = document.querySelectorAll(
+    ".sidebar-ai-button, .ai-banner-button"
+  );
+
+  chatButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      alert(
+        "ERealtor AI Assistant — coming soon."
+      );
+
+    });
+
+  });
+
+
+  // ==========================================
+  // TEST PROPERTY API
+  // ==========================================
+
+  fetch(
+    API_URL + "?location=Islamabad"
+  )
+
+    .then(function (response) {
+
+      if (!response.ok) {
+        throw new Error(
+          "API request failed: " + response.status
+        );
+      }
+
+      return response.json();
+
+    })
+
+    .then(function (data) {
+
+      console.log(
+        "ERealtor API Response:",
+        data
+      );
+
+
+      // ======================================
+      // API SUCCESS
+      // ======================================
+
+      if (
+        data &&
+        data.success &&
+        Array.isArray(data.properties)
+      ) {
+
+        console.log(
+          "ERealtor Property API connected successfully.",
+          data.properties
+        );
+
+      }
+
+    })
+
+    .catch(function (error) {
+
+      console.error(
+        "ERealtor API Connection Error:",
+        error
+      );
+
+    });
+
+});
+
 </script>
 
 </body>
