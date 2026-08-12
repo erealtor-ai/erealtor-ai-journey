@@ -1268,70 +1268,118 @@
        BASIC INTERACTION
   ========================== -->
 
-  <script>
+<script>
 
-    document.addEventListener("DOMContentLoaded", function () {
-            // ERealtor API Connection Test
-      fetch("https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec?action=health")
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          console.log("ERealtor API:", data);
-        })
-        .catch(function (error) {
-          console.error("ERealtor API Connection Error:", error);
-        });
+  // ================================
+  // EREALTOR AI — API CONNECTION
+  // ================================
 
-      const navItems = document.querySelectorAll(".nav-item");
-
-      navItems.forEach(function (item) {
-
-        item.addEventListener("click", function (event) {
-
-          event.preventDefault();
-
-          navItems.forEach(function (nav) {
-            nav.classList.remove("active");
-          });
-
-          item.classList.add("active");
-
-        });
-
-      });
+  const EREALTOR_API =
+    "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
 
 
-      const addButton = document.querySelector(".add-button");
+  // ================================
+  // API TEST
+  // ================================
 
-      if (addButton) {
+  async function testERealtorAPI() {
 
-        addButton.addEventListener("click", function () {
+    try {
 
-          alert("ERealtor Add menu — functionality coming soon.");
+      const response = await fetch(EREALTOR_API);
 
-        });
+      const data = await response.json();
+
+      console.log("ERealtor API:", data);
+
+      if (data.success === true) {
+
+        console.log("✅ ERealtor API connected successfully.");
+
+      } else {
+
+        console.warn("⚠️ ERealtor API returned an unexpected response.");
 
       }
 
+    } catch (error) {
 
-      const chatButtons = document.querySelectorAll(
-        ".sidebar-ai-button, .ai-banner-button"
-      );
+      console.error("❌ ERealtor API connection failed:", error);
 
-      chatButtons.forEach(function (button) {
+    }
 
-        button.addEventListener("click", function () {
+  }
 
-          alert("ERealtor AI Assistant — coming soon.");
+
+  // ================================
+  // DASHBOARD INTERACTIONS
+  // ================================
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+
+    // Test API
+    testERealtorAPI();
+
+
+    // Sidebar navigation
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach(function (item) {
+
+      item.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        navItems.forEach(function (nav) {
+
+          nav.classList.remove("active");
 
         });
+
+        item.classList.add("active");
 
       });
 
     });
 
-  </script>
+
+    // Add button
+    const addButton = document.querySelector(".add-button");
+
+    if (addButton) {
+
+      addButton.addEventListener("click", function () {
+
+        alert(
+          "ERealtor Add menu — functionality coming soon."
+        );
+
+      });
+
+    }
+
+
+    // AI Assistant buttons
+    const chatButtons = document.querySelectorAll(
+      ".sidebar-ai-button, .ai-banner-button"
+    );
+
+    chatButtons.forEach(function (button) {
+
+      button.addEventListener("click", function () {
+
+        alert(
+          "ERealtor AI Assistant — coming soon."
+        );
+
+      });
+
+    });
+
+  });
+
+</script>
 
 </body>
 </html>
