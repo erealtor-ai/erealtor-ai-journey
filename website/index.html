@@ -525,28 +525,28 @@
             <div class="match-divider"></div>
 
 
-            <div class="recommended-property">
+           <div class="recommended-property">
 
-              <div class="recommended-label">
-                RECOMMENDED PROPERTY
-              </div>
+  <div class="recommended-label">
+    RECOMMENDED PROPERTY
+  </div>
 
-              <div class="property-name">
-                Faisal Town
-              </div>
+  <div class="property-name" id="smartMatchPropertyName">
+    Faisal Town
+  </div>
 
-              <div class="property-details">
-                <span>10 Marla Plot</span>
-                <span>•</span>
-                <span>Islamabad</span>
-              </div>
+  <div class="property-details">
+    <span id="smartMatchPropertySize">10 Marla Plot</span>
+    <span>•</span>
+    <span id="smartMatchPropertyLocation">Islamabad</span>
+  </div>
 
-              <div class="property-price">
-                PKR 8,500,000
-                <span>Available</span>
-              </div>
+  <div class="property-price">
+    <span id="smartMatchPropertyPrice">PKR 8,500,000</span>
+    <span id="smartMatchPropertyStatus">Available</span>
+  </div>
 
-            </div>
+</div>
 
 
             <div class="match-score-row">
@@ -1455,62 +1455,158 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+// ==========================================
+// LIVE AI SMART MATCH PROPERTY API
+// ==========================================
 
-  // ==========================================
-  // TEST PROPERTY API
-  // ==========================================
+fetch(
+  API_URL + "?location=Islamabad"
+)
 
-  fetch(
-    API_URL + "?location=Islamabad"
-  )
+  .then(function (response) {
 
-    .then(function (response) {
+    if (!response.ok) {
+      throw new Error(
+        "API request failed: " + response.status
+      );
+    }
 
-      if (!response.ok) {
-        throw new Error(
-          "API request failed: " + response.status
+    return response.json();
+
+  })
+
+  .then(function (data) {
+
+    console.log(
+      "ERealtor API Response:",
+      data
+    );
+
+
+    // ======================================
+    // API SUCCESS
+    // ======================================
+
+    if (
+      data &&
+      data.success &&
+      Array.isArray(data.properties) &&
+      data.properties.length > 0
+    ) {
+
+      const property = data.properties[0];
+
+
+      // ====================================
+      // SMART MATCH PROPERTY NAME
+      // ====================================
+
+      const propertyName =
+        document.getElementById(
+          "smartMatchPropertyName"
         );
+
+      if (propertyName) {
+        propertyName.textContent =
+          property.project || "Property";
       }
 
-      return response.json();
 
-    })
+      // ====================================
+      // SMART MATCH PROPERTY SIZE
+      // ====================================
 
-    .then(function (data) {
+      const propertySize =
+        document.getElementById(
+          "smartMatchPropertySize"
+        );
+
+      if (propertySize) {
+        propertySize.textContent =
+          (property.size || "") +
+          " " +
+          (property.propertyType || "");
+      }
+
+
+      // ====================================
+      // SMART MATCH LOCATION
+      // ====================================
+
+      const propertyLocation =
+        document.getElementById(
+          "smartMatchPropertyLocation"
+        );
+
+      if (propertyLocation) {
+        propertyLocation.textContent =
+          property.location || "Islamabad";
+      }
+
+
+      // ====================================
+      // SMART MATCH PRICE
+      // ====================================
+
+      const propertyPrice =
+        document.getElementById(
+          "smartMatchPropertyPrice"
+        );
+
+      if (propertyPrice) {
+
+        const price =
+          Number(property.price || 0);
+
+        propertyPrice.textContent =
+          "PKR " +
+          price.toLocaleString("en-PK");
+
+      }
+
+
+      // ====================================
+      // SMART MATCH STATUS
+      // ====================================
+
+      const propertyStatus =
+        document.getElementById(
+          "smartMatchPropertyStatus"
+        );
+
+      if (propertyStatus) {
+        propertyStatus.textContent =
+          property.status || "Available";
+      }
+
+
+      // ====================================
+      // SUCCESS LOG
+      // ====================================
 
       console.log(
-        "ERealtor API Response:",
-        data
+        "ERealtor Property API connected successfully.",
+        property
       );
 
+    } else {
 
-      // ======================================
-      // API SUCCESS
-      // ======================================
-
-      if (
-        data &&
-        data.success &&
-        Array.isArray(data.properties)
-      ) {
-
-        console.log(
-          "ERealtor Property API connected successfully.",
-          data.properties
-        );
-
-      }
-
-    })
-
-    .catch(function (error) {
-
-      console.error(
-        "ERealtor API Connection Error:",
-        error
+      console.warn(
+        "ERealtor API returned no properties."
       );
 
-    });
+    }
+
+  })
+
+  .catch(function (error) {
+
+    console.error(
+      "ERealtor API Connection Error:",
+      error
+    );
+
+  });
 
 });
 
