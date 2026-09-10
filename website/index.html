@@ -2,243 +2,391 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ERealtor | AI Real Estate OS</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="ERealtor AI-powered Real Estate Operating System for leads, properties, follow-ups, marketing and intelligent property matching."
+    content="ERealtor AI — AI-powered Real Estate Operating System for modern real estate businesses."
   >
 
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#070b18">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <title>ERealtor | AI Real Estate OS</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- =====================================================
+       APP SHELL
+       ===================================================== -->
+
   <div class="app-shell">
 
-    <!-- =========================
+
+    <!-- =====================================================
          SIDEBAR
-    ========================== -->
+         ===================================================== -->
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
 
-      <div class="sidebar-top">
+      <div class="sidebar-inner">
+
+        <!-- BRAND -->
 
         <div class="brand">
-          <div class="brand-mark">E</div>
 
-          <div class="brand-text">
-            <div class="brand-name">ERealtor</div>
-            <div class="brand-subtitle">AI Real Estate OS</div>
+          <div class="brand-logo">
+            <span>E</span>
           </div>
+
+          <div class="brand-copy">
+            <strong>ERealtor</strong>
+            <span>AI Real Estate OS</span>
+          </div>
+
         </div>
+
+
+        <!-- SIDEBAR NAVIGATION -->
 
         <nav class="sidebar-nav">
 
-          <div class="nav-section-title">WORKSPACE</div>
+          <div class="nav-section">
 
-          <a href="#" class="nav-item active">
-            <span class="nav-icon">⌂</span>
-            <span>Dashboard</span>
-          </a>
+            <span class="nav-section-label">
+              MAIN
+            </span>
 
-          <a href="#" class="nav-item">
-            <span class="nav-icon">♙</span>
-            <span>Leads</span>
-            <span class="nav-badge">128</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">⌂</span>
-            <span>Properties</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">◷</span>
-            <span>Follow Ups</span>
-            <span class="nav-badge">18</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">□</span>
-            <span>Calendar</span>
-          </a>
-
-          <a href="#" class="nav-item ai-nav-item">
-            <span class="nav-icon">✦</span>
-            <span>AI Assistant</span>
-          </a>
+            <a
+              href="#dashboard"
+              class="nav-item active"
+              data-page="dashboard"
+            >
+              <span class="nav-icon">⌂</span>
+              <span>Dashboard</span>
+            </a>
 
 
-          <div class="nav-section-title growth-title">GROWTH</div>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">◈</span>
-            <span>Marketing</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">▥</span>
-            <span>Reports</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">⚙</span>
-            <span>Automation</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">◉</span>
-            <span>WhatsApp</span>
-          </a>
+            <a
+              href="#leads"
+              class="nav-item"
+              data-page="leads"
+            >
+              <span class="nav-icon">◎</span>
+              <span>Leads</span>
+              <span class="nav-badge">12</span>
+            </a>
 
 
-          <div class="nav-section-title system-title">SYSTEM</div>
+            <a
+              href="#properties"
+              class="nav-item"
+              data-page="properties"
+            >
+              <span class="nav-icon">▦</span>
+              <span>Properties</span>
+            </a>
 
-          <a href="#" class="nav-item">
-            <span class="nav-icon">⚙</span>
-            <span>Settings</span>
-          </a>
+
+            <a
+              href="#followups"
+              class="nav-item"
+              data-page="followups"
+            >
+              <span class="nav-icon">◷</span>
+              <span>Follow Ups</span>
+              <span class="nav-badge soft">18</span>
+            </a>
+
+
+            <a
+              href="#calendar"
+              class="nav-item"
+              data-page="calendar"
+            >
+              <span class="nav-icon">□</span>
+              <span>Calendar</span>
+            </a>
+
+          </div>
+
+
+          <div class="nav-section">
+
+            <span class="nav-section-label">
+              AI & GROWTH
+            </span>
+
+
+            <a
+              href="#ai-assistant"
+              class="nav-item ai-nav-item"
+              data-page="ai-assistant"
+            >
+              <span class="nav-icon ai-icon">✦</span>
+              <span>AI Assistant</span>
+              <span class="live-dot"></span>
+            </a>
+
+
+            <a
+              href="#marketing"
+              class="nav-item"
+              data-page="marketing"
+            >
+              <span class="nav-icon">↗</span>
+              <span>Marketing</span>
+            </a>
+
+
+            <a
+              href="#reports"
+              class="nav-item"
+              data-page="reports"
+            >
+              <span class="nav-icon">▥</span>
+              <span>Reports</span>
+            </a>
+
+
+            <a
+              href="#automation"
+              class="nav-item"
+              data-page="automation"
+            >
+              <span class="nav-icon">⚡</span>
+              <span>Automation</span>
+            </a>
+
+
+            <a
+              href="#whatsapp"
+              class="nav-item"
+              data-page="whatsapp"
+            >
+              <span class="nav-icon">◉</span>
+              <span>WhatsApp</span>
+              <span class="connection-dot"></span>
+            </a>
+
+          </div>
+
+
+          <div class="nav-section">
+
+            <span class="nav-section-label">
+              SYSTEM
+            </span>
+
+            <a
+              href="#settings"
+              class="nav-item"
+              data-page="settings"
+            >
+              <span class="nav-icon">⚙</span>
+              <span>Settings</span>
+            </a>
+
+          </div>
 
         </nav>
 
-      </div>
 
-
-      <!-- AI ASSISTANT SIDEBAR CARD -->
-
-      <div class="sidebar-bottom">
+        <!-- SIDEBAR AI CARD -->
 
         <div class="sidebar-ai-card">
 
-          <div class="sidebar-ai-icon">✦</div>
+          <div class="sidebar-ai-glow"></div>
 
-          <div class="sidebar-ai-title">
-            AI Assistant
+          <div class="sidebar-ai-icon">
+            ✦
           </div>
 
-          <p>
-            Ask anything about your real estate business...
-          </p>
+          <div class="sidebar-ai-content">
 
-          <button class="sidebar-ai-button">
-            Chat Now
+            <strong>
+              AI Assistant
+            </strong>
+
+            <span>
+              Your real estate copilot
+            </span>
+
+          </div>
+
+          <button
+            class="sidebar-ai-button"
+            type="button"
+          >
+            Open AI
             <span>→</span>
           </button>
 
         </div>
 
+      </div>
 
-        <div class="sidebar-footer">
 
-          <div class="user-mini">
+      <!-- SIDEBAR USER -->
 
-            <div class="user-avatar">
-              HS
-            </div>
+      <div class="sidebar-user">
 
-            <div class="user-mini-info">
-              <strong>Hamza Soomro</strong>
-              <span>Administrator</span>
-            </div>
+        <div class="user-avatar">
+          HS
+        </div>
 
-          </div>
+        <div class="user-info">
+
+          <strong>
+            Hamza Soomro
+          </strong>
+
+          <span>
+            S&B Marketing
+          </span>
 
         </div>
+
+        <button
+          class="user-menu-button"
+          type="button"
+          aria-label="User menu"
+        >
+          ⋮
+        </button>
 
       </div>
 
     </aside>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          MAIN AREA
-    ========================== -->
+         ===================================================== -->
 
     <main class="main-area">
 
 
-      <!-- =========================
-           HEADER
-      ========================== -->
+      <!-- ===================================================
+           TOP HEADER
+           =================================================== -->
 
       <header class="top-header">
 
-        <div class="mobile-brand">
-          <div class="brand-mark">E</div>
-          <strong>ERealtor</strong>
-        </div>
+        <div class="header-left">
 
-
-        <div class="global-search">
-
-          <span class="search-icon">⌕</span>
-
-          <input
-            type="text"
-            placeholder="Search leads, properties, contacts..."
-            aria-label="Search"
+          <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation"
           >
+            ☰
+          </button>
 
-          <span class="search-shortcut">
-            /
-          </span>
+
+          <div class="mobile-brand">
+            <div class="mobile-brand-logo">
+              E
+            </div>
+
+            <strong>
+              ERealtor
+            </strong>
+          </div>
+
+
+          <div class="global-search">
+
+            <span class="search-icon">
+              ⌕
+            </span>
+
+            <input
+              type="search"
+              id="globalSearch"
+              placeholder="Search leads, properties, projects..."
+              autocomplete="off"
+            >
+
+            <span class="search-shortcut">
+              /
+            </span>
+
+          </div>
 
         </div>
 
 
         <div class="header-actions">
 
-          <button class="header-action-button add-button">
-            <span>+</span>
-            <span class="add-label">Add</span>
-          </button>
-
           <button
-            class="header-action-button"
-            aria-label="Notifications"
+            class="header-icon-button"
+            type="button"
+            title="Add"
+            id="addButton"
           >
-            ◌
-            <span class="notification-dot"></span>
+            +
           </button>
 
+
           <button
-            class="header-action-button"
-            aria-label="Help"
+            class="header-icon-button notification-button"
+            type="button"
+            title="Notifications"
+          >
+            ♢
+            <span></span>
+          </button>
+
+
+          <button
+            class="header-icon-button"
+            type="button"
+            title="Help"
           >
             ?
           </button>
 
-          <div class="header-divider"></div>
 
           <div class="header-profile">
 
-            <div class="profile-avatar">
+            <div class="header-avatar">
               HS
             </div>
 
-            <div class="profile-info">
-              <strong>Hamza</strong>
-              <span>Admin</span>
+            <div class="header-profile-info">
+
+              <strong>
+                Hamza Soomro
+              </strong>
+
+              <span>
+                Admin
+              </span>
+
             </div>
 
-            <span class="profile-arrow">⌄</span>
+            <span class="profile-chevron">
+              ▾
+            </span>
 
           </div>
 
@@ -247,64 +395,84 @@
       </header>
 
 
-      <!-- =========================
+
+      <!-- ===================================================
            DASHBOARD CONTENT
-      ========================== -->
+           =================================================== -->
 
-      <section class="dashboard-content">
+      <div class="dashboard-content" id="dashboard">
 
 
-        <!-- PAGE HEADING -->
+        <!-- =================================================
+             PAGE INTRO / AI HERO
+             ================================================= -->
 
-        <div class="page-heading">
+        <section class="page-intro">
 
           <div>
 
-            <div class="page-title-row">
-              <h1>Dashboard</h1>
-              <span class="greeting-icon">👋</span>
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              AI REAL ESTATE OS
             </div>
 
+            <h1>
+              Good evening, Hamza.
+            </h1>
+
             <p>
-              Welcome back, Hamza! Here's what's happening today.
+              Your business intelligence at a glance.
+              ERealtor AI is monitoring your leads,
+              properties and opportunities.
             </p>
 
           </div>
 
 
-          <div class="date-selector">
+          <div class="intro-actions">
 
-            <span class="calendar-icon">□</span>
+            <div class="system-status">
 
-            <div>
-              <span class="date-label">TODAY</span>
-              <strong>12 August 2026</strong>
+              <span class="system-status-dot"></span>
+
+              <span>
+                All systems operational
+              </span>
+
             </div>
 
-            <span class="date-arrow">⌄</span>
+            <button
+              class="primary-button"
+              id="heroAddButton"
+              type="button"
+            >
+              <span>+</span>
+              Add New
+            </button>
 
           </div>
 
-        </div>
+        </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              KPI CARDS
-        ========================== -->
+             ================================================= -->
 
-        <div class="kpi-grid">
+        <section class="kpi-grid">
 
 
-          <div class="kpi-card">
+          <article class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon blue">
-                ♙
+                ◎
               </div>
 
               <span class="kpi-trend positive">
-                ↑ 12.5%
+                ↑ 12.8%
               </span>
 
             </div>
@@ -318,109 +486,92 @@
             </div>
 
             <div class="kpi-footer">
-              <span>vs. last month</span>
-            </div>
-
-          </div>
-
-
-          <div class="kpi-card">
-
-            <div class="kpi-top">
-
-              <div class="kpi-icon red">
-                ♨
-              </div>
-
-              <span class="kpi-trend positive">
-                ↑ 8.3%
+              <span>
+                vs. 114 last month
               </span>
 
+              <span class="kpi-mini-line blue-line"></span>
             </div>
 
-            <div class="kpi-label">
-              Hot Leads
-            </div>
-
-            <div class="kpi-value">
-              12
-            </div>
-
-            <div class="kpi-footer">
-              <span>Ready for action</span>
-            </div>
-
-          </div>
+          </article>
 
 
-          <div class="kpi-card">
-
-            <div class="kpi-top">
-
-              <div class="kpi-icon orange">
-                ◷
-              </div>
-
-              <span class="kpi-trend warning">
-                5 due today
-              </span>
-
-            </div>
-
-            <div class="kpi-label">
-              Follow Ups
-            </div>
-
-            <div class="kpi-value">
-              18
-            </div>
-
-            <div class="kpi-footer">
-              <span>Upcoming actions</span>
-            </div>
-
-          </div>
-
-
-          <div class="kpi-card">
+          <article class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon purple">
-                ◉
+                ✦
               </div>
 
               <span class="kpi-trend positive">
-                ↑ 2 this week
+                ↑ 8.4%
               </span>
 
             </div>
 
             <div class="kpi-label">
-              Site Visits
+              AI Qualified Leads
             </div>
 
             <div class="kpi-value">
-              4
+              42
             </div>
 
             <div class="kpi-footer">
-              <span>Scheduled visits</span>
+              <span>
+                32.8% of total leads
+              </span>
+
+              <span class="kpi-mini-line purple-line"></span>
             </div>
 
-          </div>
+          </article>
 
 
-          <div class="kpi-card commission-card">
+          <article class="kpi-card">
 
             <div class="kpi-top">
 
               <div class="kpi-icon green">
+                ◇
+              </div>
+
+              <span class="kpi-trend positive">
+                ↑ 14
+              </span>
+
+            </div>
+
+            <div class="kpi-label">
+              Active Properties
+            </div>
+
+            <div class="kpi-value">
+              286
+            </div>
+
+            <div class="kpi-footer">
+              <span>
+                Added this month
+              </span>
+
+              <span class="kpi-mini-line green-line"></span>
+            </div>
+
+          </article>
+
+
+          <article class="kpi-card">
+
+            <div class="kpi-top">
+
+              <div class="kpi-icon orange">
                 ₨
               </div>
 
               <span class="kpi-trend positive">
-                ↑ 18.7%
+                ↑ 18.6%
               </span>
 
             </div>
@@ -429,799 +580,1315 @@
               Expected Commission
             </div>
 
-            <div class="kpi-value commission-value">
+            <div class="kpi-value commission">
               PKR 12.5M
             </div>
 
             <div class="kpi-footer">
-              <span>Pipeline estimate</span>
+              <span>
+                Current pipeline
+              </span>
+
+              <span class="kpi-mini-line orange-line"></span>
             </div>
+
+          </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN GRID
+             ================================================= -->
+
+        <section class="dashboard-grid">
+
+
+          <!-- ===============================================
+               LEFT COLUMN
+               =============================================== -->
+
+          <div class="dashboard-main-column">
+
+
+            <!-- =============================================
+                 AI SMART MATCH
+                 ============================================= -->
+
+            <section class="ai-smart-match dashboard-panel">
+
+              <div class="ai-match-background"></div>
+
+              <div class="panel-header">
+
+                <div class="panel-title-group">
+
+                  <div class="ai-panel-icon">
+                    ✦
+                  </div>
+
+                  <div>
+
+                    <div class="panel-kicker">
+                      AI INTELLIGENCE
+                    </div>
+
+                    <h2>
+                      Smart Property Match
+                    </h2>
+
+                    <span>
+                      AI found the best property for your hottest lead
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <span class="ai-live-badge">
+                  <span></span>
+                  LIVE AI
+                </span>
+
+              </div>
+
+
+              <div class="smart-match-body">
+
+
+                <!-- PROPERTY VISUAL -->
+
+                <div class="property-visual">
+
+                  <div class="property-image-placeholder">
+
+                    <div class="property-image-overlay"></div>
+
+                    <div class="property-location-tag">
+                      ● Islamabad
+                    </div>
+
+                    <div class="property-image-content">
+
+                      <span>
+                        FEATURED PROPERTY
+                      </span>
+
+                      <strong>
+                        Faisal Town
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PROPERTY INFO -->
+
+                <div class="smart-match-info">
+
+                  <div class="match-lead">
+
+                    <div class="lead-avatar">
+                      AK
+                    </div>
+
+                    <div>
+
+                      <span>
+                        Recommended for
+                      </span>
+
+                      <strong>
+                        Ahmed Khan
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="property-info-main">
+
+                    <span class="property-type-label">
+                      Residential Plot
+                    </span>
+
+                    <h3 id="smartMatchPropertyName">
+                      Faisal Town
+                    </h3>
+
+                    <div class="property-meta">
+
+                      <span id="smartMatchPropertySize">
+                        10 Marla Plot
+                      </span>
+
+                      <i></i>
+
+                      <span id="smartMatchPropertyLocation">
+                        Islamabad
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="property-price-row">
+
+                    <div>
+
+                      <span>
+                        Asking Price
+                      </span>
+
+                      <strong id="smartMatchPropertyPrice">
+                        PKR 8,500,000
+                      </strong>
+
+                    </div>
+
+                    <span
+                      class="availability-badge"
+                      id="smartMatchPropertyStatus"
+                    >
+                      Available
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- MATCH SCORE -->
+
+                <div class="match-score-box">
+
+                  <div class="score-ring">
+
+                    <svg
+                      viewBox="0 0 100 100"
+                      aria-hidden="true"
+                    >
+
+                      <circle
+                        class="score-track"
+                        cx="50"
+                        cy="50"
+                        r="42"
+                      ></circle>
+
+                      <circle
+                        class="score-progress"
+                        cx="50"
+                        cy="50"
+                        r="42"
+                      ></circle>
+
+                    </svg>
+
+                    <div class="score-number">
+                      <strong>
+                        98%
+                      </strong>
+
+                      <span>
+                        MATCH
+                      </span>
+                    </div>
+
+                  </div>
+
+
+                  <div class="score-copy">
+
+                    <strong>
+                      Excellent Match
+                    </strong>
+
+                    <span>
+                      AI confidence score
+                    </span>
+
+                  </div>
+
+
+                  <div class="match-reasons">
+
+                    <span>
+                      ✓ Location
+                    </span>
+
+                    <span>
+                      ✓ Size
+                    </span>
+
+                    <span>
+                      ✓ Budget
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="smart-match-footer">
+
+                <span>
+                  ✦ AI analyzed 24 available properties
+                </span>
+
+                <button
+                  class="text-button"
+                  type="button"
+                  id="viewPropertyButton"
+                >
+                  View Property
+                  <span>→</span>
+                </button>
+
+              </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 ANALYTICS ROW
+                 ============================================= -->
+
+            <div class="analytics-grid">
+
+
+              <!-- LEADS CHART -->
+
+              <section class="dashboard-panel chart-panel">
+
+                <div class="panel-header">
+
+                  <div>
+
+                    <div class="panel-kicker">
+                      PIPELINE
+                    </div>
+
+                    <h2>
+                      Lead Performance
+                    </h2>
+
+                  </div>
+
+                  <button
+                    class="period-button"
+                    type="button"
+                  >
+                    Last 30 Days
+                    <span>⌄</span>
+                  </button>
+
+                </div>
+
+
+                <div class="chart-summary">
+
+                  <strong>
+                    128
+                  </strong>
+
+                  <span class="positive-text">
+                    +12.8%
+                  </span>
+
+                  <span>
+                    total leads
+                  </span>
+
+                </div>
+
+
+                <div class="line-chart">
+
+                  <div class="chart-y-axis">
+                    <span>150</span>
+                    <span>100</span>
+                    <span>50</span>
+                    <span>0</span>
+                  </div>
+
+                  <div class="chart-area">
+
+                    <div class="chart-grid-line one"></div>
+                    <div class="chart-grid-line two"></div>
+                    <div class="chart-grid-line three"></div>
+                    <div class="chart-grid-line four"></div>
+
+                    <svg
+                      class="chart-svg"
+                      viewBox="0 0 600 190"
+                      preserveAspectRatio="none"
+                    >
+
+                      <defs>
+
+                        <linearGradient
+                          id="chartGradient"
+                          x1="0"
+                          y1="0"
+                          x2="0"
+                          y2="1"
+                        >
+
+                          <stop
+                            offset="0%"
+                            stop-opacity="0.30"
+                          />
+
+                          <stop
+                            offset="100%"
+                            stop-opacity="0"
+                          />
+
+                        </linearGradient>
+
+                      </defs>
+
+                      <path
+                        class="chart-fill"
+                        d="M0,150
+                           C50,142 70,135 100,128
+                           C130,120 150,130 180,112
+                           C210,95 225,110 255,91
+                           C290,68 310,82 340,71
+                           C370,60 390,74 420,51
+                           C450,30 480,48 510,34
+                           C545,18 570,30 600,12
+                           L600,190
+                           L0,190 Z"
+                      ></path>
+
+                      <path
+                        class="chart-line"
+                        d="M0,150
+                           C50,142 70,135 100,128
+                           C130,120 150,130 180,112
+                           C210,95 225,110 255,91
+                           C290,68 310,82 340,71
+                           C370,60 390,74 420,51
+                           C450,30 480,48 510,34
+                           C545,18 570,30 600,12"
+                      ></path>
+
+                    </svg>
+
+
+                    <div class="chart-x-axis">
+                      <span>Aug 1</span>
+                      <span>Aug 8</span>
+                      <span>Aug 15</span>
+                      <span>Aug 22</span>
+                      <span>Aug 30</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
+
+
+              <!-- LEAD STATUS -->
+
+              <section class="dashboard-panel status-panel">
+
+                <div class="panel-header">
+
+                  <div>
+
+                    <div class="panel-kicker">
+                      LEAD HEALTH
+                    </div>
+
+                    <h2>
+                      Leads by Status
+                    </h2>
+
+                  </div>
+
+                  <button
+                    class="icon-more-button"
+                    type="button"
+                  >
+                    ⋮
+                  </button>
+
+                </div>
+
+
+                <div class="status-chart-area">
+
+                  <div class="donut-chart">
+
+                    <svg
+                      viewBox="0 0 120 120"
+                      aria-hidden="true"
+                    >
+
+                      <circle
+                        class="donut-track"
+                        cx="60"
+                        cy="60"
+                        r="45"
+                      ></circle>
+
+                      <circle
+                        class="donut-hot"
+                        cx="60"
+                        cy="60"
+                        r="45"
+                      ></circle>
+
+                      <circle
+                        class="donut-warm"
+                        cx="60"
+                        cy="60"
+                        r="45"
+                      ></circle>
+
+                      <circle
+                        class="donut-cold"
+                        cx="60"
+                        cy="60"
+                        r="45"
+                      ></circle>
+
+                    </svg>
+
+                    <div class="donut-center">
+
+                      <strong>
+                        128
+                      </strong>
+
+                      <span>
+                        Total Leads
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="status-list">
+
+                    <div class="status-list-item">
+
+                      <div>
+                        <span class="status-dot hot"></span>
+                        <span>Hot</span>
+                      </div>
+
+                      <strong>12</strong>
+
+                    </div>
+
+
+                    <div class="status-list-item">
+
+                      <div>
+                        <span class="status-dot warm"></span>
+                        <span>Warm</span>
+                      </div>
+
+                      <strong>34</strong>
+
+                    </div>
+
+
+                    <div class="status-list-item">
+
+                      <div>
+                        <span class="status-dot contacted"></span>
+                        <span>Contacted</span>
+                      </div>
+
+                      <strong>46</strong>
+
+                    </div>
+
+
+                    <div class="status-list-item">
+
+                      <div>
+                        <span class="status-dot cold"></span>
+                        <span>Cold</span>
+                      </div>
+
+                      <strong>36</strong>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 RECENT LEADS
+                 ============================================= -->
+
+            <section class="dashboard-panel recent-leads-panel">
+
+              <div class="panel-header">
+
+                <div>
+
+                  <div class="panel-kicker">
+                    CRM
+                  </div>
+
+                  <h2>
+                    Recent Leads
+                  </h2>
+
+                  <span>
+                    Latest activity from your pipeline
+                  </span>
+
+                </div>
+
+                <button
+                  class="outline-button"
+                  type="button"
+                  data-page-target="leads"
+                >
+                  View All
+                  <span>→</span>
+                </button>
+
+              </div>
+
+
+              <div class="lead-table">
+
+                <div class="lead-table-header">
+
+                  <span>
+                    LEAD
+                  </span>
+
+                  <span>
+                    STATUS
+                  </span>
+
+                  <span>
+                    REQUIREMENT
+                  </span>
+
+                  <span>
+                    LAST ACTIVITY
+                  </span>
+
+                </div>
+
+
+                <div class="lead-table-row">
+
+                  <div class="table-lead-person">
+
+                    <div class="table-avatar blue-avatar">
+                      AK
+                    </div>
+
+                    <div>
+
+                      <strong>
+                        Ahmed Khan
+                      </strong>
+
+                      <span>
+                        Buyer · Islamabad
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div>
+                    <span class="status-pill hot">
+                      Hot
+                    </span>
+                  </div>
+
+
+                  <div class="lead-requirement">
+                    10 Marla Plot
+                  </div>
+
+
+                  <div class="activity-time">
+                    Today, 08:25 AM
+                  </div>
+
+                </div>
+
+
+                <div class="lead-table-row">
+
+                  <div class="table-lead-person">
+
+                    <div class="table-avatar green-avatar">
+                      BA
+                    </div>
+
+                    <div>
+
+                      <strong>
+                        Bilal Ahmed
+                      </strong>
+
+                      <span>
+                        Investor · Rawalpindi
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div>
+                    <span class="status-pill hot">
+                      Hot
+                    </span>
+                  </div>
+
+
+                  <div class="lead-requirement">
+                    Commercial Plot
+                  </div>
+
+
+                  <div class="activity-time">
+                    Yesterday, 05:18 PM
+                  </div>
+
+                </div>
+
+
+                <div class="lead-table-row">
+
+                  <div class="table-lead-person">
+
+                    <div class="table-avatar purple-avatar">
+                      UA
+                    </div>
+
+                    <div>
+
+                      <strong>
+                        Usman Ali
+                      </strong>
+
+                      <span>
+                        Buyer · Islamabad
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div>
+                    <span class="status-pill hot">
+                      Hot
+                    </span>
+                  </div>
+
+
+                  <div class="lead-requirement">
+                    House
+                  </div>
+
+
+                  <div class="activity-time">
+                    Yesterday, 02:40 PM
+                  </div>
+
+                </div>
+
+
+                <div class="lead-table-row">
+
+                  <div class="table-lead-person">
+
+                    <div class="table-avatar orange-avatar">
+                      HM
+                    </div>
+
+                    <div>
+
+                      <strong>
+                        Hamza Malik
+                      </strong>
+
+                      <span>
+                        Buyer · Islamabad
+                      </span>
+
+                    </div>
+
+                  </div>
+
+
+                  <div>
+                    <span class="status-pill warm">
+                      Warm
+                    </span>
+                  </div>
+
+
+                  <div class="lead-requirement">
+                    Apartment
+                  </div>
+
+
+                  <div class="activity-time">
+                    Aug 10, 11:20 AM
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 PROPERTY OVERVIEW
+                 ============================================= -->
+
+            <section class="dashboard-panel properties-overview-panel">
+
+              <div class="panel-header">
+
+                <div>
+
+                  <div class="panel-kicker">
+                    INVENTORY
+                  </div>
+
+                  <h2>
+                    Properties Overview
+                  </h2>
+
+                  <span>
+                    Your current real estate inventory
+                  </span>
+
+                </div>
+
+                <button
+                  class="outline-button"
+                  type="button"
+                  data-page-target="properties"
+                >
+                  Manage Properties
+                  <span>→</span>
+                </button>
+
+              </div>
+
+
+              <div class="property-overview-grid">
+
+
+                <div class="inventory-summary">
+
+                  <span>
+                    Total Properties
+                  </span>
+
+                  <strong>
+                    286
+                  </strong>
+
+                  <small>
+                    <b>+14</b> added this month
+                  </small>
+
+                </div>
+
+
+                <div class="inventory-stat">
+
+                  <div class="inventory-icon available">
+                    ✓
+                  </div>
+
+                  <div>
+
+                    <span>
+                      Available
+                    </span>
+
+                    <strong>
+                      184
+                    </strong>
+
+                  </div>
+
+                </div>
+
+
+                <div class="inventory-stat">
+
+                  <div class="inventory-icon reserved">
+                    ◷
+                  </div>
+
+                  <div>
+
+                    <span>
+                      Reserved
+                    </span>
+
+                    <strong>
+                      42
+                    </strong>
+
+                  </div>
+
+                </div>
+
+
+                <div class="inventory-stat">
+
+                  <div class="inventory-icon sold">
+                    $
+                  </div>
+
+                  <div>
+
+                    <span>
+                      Sold
+                    </span>
+
+                    <strong>
+                      60
+                    </strong>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
 
           </div>
 
-        </div>
 
 
-        <!-- =========================
-             FIRST CONTENT ROW
-        ========================== -->
+          <!-- ===============================================
+               RIGHT COLUMN
+               =============================================== -->
 
-        <div class="dashboard-grid three-column">
+          <aside class="dashboard-side-column">
 
 
-          <!-- AI SMART MATCH -->
+            <!-- =============================================
+                 TODAY'S SCHEDULE
+                 ============================================= -->
 
-          <section class="dashboard-card smart-match-card">
+            <section class="dashboard-panel schedule-panel">
 
-            <div class="card-header">
+              <div class="panel-header">
 
-              <div>
+                <div>
 
-                <div class="card-title-with-icon">
-
-                  <div class="card-title-icon ai-icon">
-                    ✦
+                  <div class="panel-kicker">
+                    CALENDAR
                   </div>
 
-                  <div>
-                    <h2>AI Smart Match</h2>
-                    <span>Intelligent property recommendation</span>
-                  </div>
+                  <h2>
+                    Today's Schedule
+                  </h2>
 
                 </div>
 
+                <button
+                  class="icon-more-button"
+                  type="button"
+                >
+                  ⋮
+                </button>
+
               </div>
 
-              <button class="more-button">•••</button>
 
-            </div>
+              <div class="schedule-date">
 
-
-            <div class="match-lead">
-
-              <div class="match-person">
-
-                <div class="person-avatar">
-                  AK
+                <div class="date-number">
+                  12
                 </div>
 
                 <div>
-                  <strong>Ahmed Khan</strong>
-                  <span>Hot Lead • Islamabad</span>
-                </div>
 
-              </div>
-
-              <span class="hot-pill">
-                HOT
-              </span>
-
-            </div>
-
-
-            <div class="match-request">
-
-              <div class="request-label">
-                LOOKING FOR
-              </div>
-
-              <div class="request-details">
-
-                <div>
-                  <strong>Residential Plot</strong>
-                  <span>10 Marla</span>
-                </div>
-
-                <div>
-                  <strong>PKR 2 Crore</strong>
-                  <span>Budget</span>
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="match-divider"></div>
-
-
-           <div class="recommended-property">
-
-  <div class="recommended-label">
-    RECOMMENDED PROPERTY
-  </div>
-
-  <div class="property-name" id="smartMatchPropertyName">
-    Faisal Town
-  </div>
-
-  <div class="property-details">
-    <span id="smartMatchPropertySize">10 Marla Plot</span>
-    <span>•</span>
-    <span id="smartMatchPropertyLocation">Islamabad</span>
-  </div>
-
-  <div class="property-price">
-    <span id="smartMatchPropertyPrice">PKR 8,500,000</span>
-    <span id="smartMatchPropertyStatus">Available</span>
-  </div>
-
-</div>
-
-
-            <div class="match-score-row">
-
-              <div class="match-score">
-
-                <div class="score-circle">
-                  <strong>98%</strong>
-                </div>
-
-                <div>
-                  <strong>Match Score</strong>
-                  <span>Excellent match</span>
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="match-reasons">
-
-              <span>
-                ✓ Same Location
-              </span>
-
-              <span>
-                ✓ Same Size
-              </span>
-
-              <span>
-                ✓ Budget Match
-              </span>
-
-            </div>
-
-
-            <button class="primary-card-button">
-              View Property
-              <span>→</span>
-            </button>
-
-          </section>
-
-
-          <!-- LEADS BY STATUS -->
-
-          <section class="dashboard-card status-card">
-
-            <div class="card-header">
-
-              <div>
-
-                <h2>Leads by Status</h2>
-                <span>Current lead distribution</span>
-
-              </div>
-
-              <button class="more-button">•••</button>
-
-            </div>
-
-
-            <div class="status-content">
-
-              <div class="donut-chart">
-
-                <div class="donut-center">
-
-                  <strong>128</strong>
-                  <span>Total Leads</span>
-
-                </div>
-
-              </div>
-
-
-              <div class="status-list">
-
-                <div class="status-item">
-
-                  <div class="status-name">
-                    <span class="status-dot hot"></span>
-                    Hot
-                  </div>
-
-                  <strong>12</strong>
-
-                </div>
-
-                <div class="status-item">
-
-                  <div class="status-name">
-                    <span class="status-dot warm"></span>
-                    Warm
-                  </div>
-
-                  <strong>38</strong>
-
-                </div>
-
-                <div class="status-item">
-
-                  <div class="status-name">
-                    <span class="status-dot cold"></span>
-                    Cold
-                  </div>
-
-                  <strong>78</strong>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="status-progress">
-
-              <div
-                class="progress-hot"
-                style="width: 9.4%;"
-              ></div>
-
-              <div
-                class="progress-warm"
-                style="width: 29.7%;"
-              ></div>
-
-              <div
-                class="progress-cold"
-                style="width: 60.9%;"
-              ></div>
-
-            </div>
-
-
-            <button class="text-button">
-              View All Leads
-              <span>→</span>
-            </button>
-
-          </section>
-
-
-          <!-- UPCOMING FOLLOW UPS -->
-
-          <section class="dashboard-card followup-card">
-
-            <div class="card-header">
-
-              <div>
-
-                <h2>Upcoming Follow Ups</h2>
-                <span>Your next actions</span>
-
-              </div>
-
-              <button class="more-button">•••</button>
-
-            </div>
-
-
-            <div class="followup-list">
-
-
-              <div class="followup-item">
-
-                <div class="followup-icon call">
-                  ☎
-                </div>
-
-                <div class="followup-info">
-
-                  <strong>Usman Ali</strong>
+                  <strong>
+                    Wednesday
+                  </strong>
 
                   <span>
-                    Follow up call
+                    August 2026
                   </span>
 
                 </div>
 
-                <div class="followup-time">
-                  10:00 AM
+              </div>
+
+
+              <div class="schedule-list">
+
+
+                <div class="schedule-item">
+
+                  <div class="schedule-time">
+                    10:00
+                    <small>AM</small>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+
+                    <strong>
+                      Site Visit
+                    </strong>
+
+                    <span>
+                      Ahmed Khan · Faisal Town
+                    </span>
+
+                    <div class="schedule-tag blue-tag">
+                      Site Visit
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                  <div class="schedule-time">
+                    12:30
+                    <small>PM</small>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+
+                    <strong>
+                      Follow-up Call
+                    </strong>
+
+                    <span>
+                      Bilal Ahmed · Commercial
+                    </span>
+
+                    <div class="schedule-tag purple-tag">
+                      Follow-up
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                  <div class="schedule-time">
+                    04:00
+                    <small>PM</small>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+
+                    <strong>
+                      Property Presentation
+                    </strong>
+
+                    <span>
+                      New Investor · Islamabad
+                    </span>
+
+                    <div class="schedule-tag green-tag">
+                      Meeting
+                    </div>
+
+                  </div>
+
                 </div>
 
               </div>
 
 
-              <div class="followup-item">
-
-                <div class="followup-icon visit">
-                  ◉
-                </div>
-
-                <div class="followup-info">
-
-                  <strong>Bilal Ahmed</strong>
-
-                  <span>
-                    Property Visit
-                  </span>
-
-                </div>
-
-                <div class="followup-time">
-                  12:00 PM
-                </div>
-
-              </div>
-
-
-              <div class="followup-item">
-
-                <div class="followup-icon payment">
-                  ₨
-                </div>
-
-                <div class="followup-info">
-
-                  <strong>Zainab Malik</strong>
-
-                  <span>
-                    Payment Discussion
-                  </span>
-
-                </div>
-
-                <div class="followup-time">
-                  03:00 PM
-                </div>
-
-              </div>
-
-
-              <div class="followup-item">
-
-                <div class="followup-icon document">
-                  □
-                </div>
-
-                <div class="followup-info">
-
-                  <strong>Ali Raza</strong>
-
-                  <span>
-                    Documents
-                  </span>
-
-                </div>
-
-                <div class="followup-time">
-                  04:30 PM
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <button class="text-button">
-              Open Follow Ups
-              <span>→</span>
-            </button>
-
-          </section>
-
-        </div>
-
-
-        <!-- =========================
-             SECOND CONTENT ROW
-        ========================== -->
-
-        <div class="dashboard-grid three-column">
-
-
-          <!-- RECENT LEADS -->
-
-          <section class="dashboard-card recent-leads-card">
-
-            <div class="card-header">
-
-              <div>
-
-                <h2>Recent Leads</h2>
-                <span>Latest activity in your CRM</span>
-
-              </div>
-
-              <button class="text-button small">
-                View All
+              <button
+                class="full-width-button"
+                type="button"
+                data-page-target="calendar"
+              >
+                Open Calendar
               </button>
 
-            </div>
+            </section>
 
 
-            <div class="lead-table">
 
-              <div class="lead-table-head">
-                <span>LEAD</span>
-                <span>STATUS</span>
-                <span>REQUIREMENT</span>
-              </div>
+            <!-- =============================================
+                 AI ACTIVITY
+                 ============================================= -->
 
+            <section class="dashboard-panel ai-activity-panel">
 
-              <div class="lead-row">
-
-                <div class="lead-person">
-
-                  <div class="table-avatar avatar-blue">
-                    AK
-                  </div>
-
-                  <div>
-                    <strong>Ahmed Khan</strong>
-                    <span>Today, 09:42 AM</span>
-                  </div>
-
-                </div>
-
-                <span class="status-pill hot-pill">
-                  Hot
-                </span>
-
-                <span class="lead-requirement">
-                  10 Marla Plot<br>
-                  Islamabad
-                </span>
-
-              </div>
-
-
-              <div class="lead-row">
-
-                <div class="lead-person">
-
-                  <div class="table-avatar avatar-purple">
-                    UA
-                  </div>
-
-                  <div>
-                    <strong>Usman Ali</strong>
-                    <span>Today, 08:25 AM</span>
-                  </div>
-
-                </div>
-
-                <span class="status-pill warm-pill">
-                  Warm
-                </span>
-
-                <span class="lead-requirement">
-                  5 Marla Plot<br>
-                  Rawalpindi
-                </span>
-
-              </div>
-
-
-              <div class="lead-row">
-
-                <div class="lead-person">
-
-                  <div class="table-avatar avatar-green">
-                    BA
-                  </div>
-
-                  <div>
-                    <strong>Bilal Ahmed</strong>
-                    <span>Yesterday, 05:18 PM</span>
-                  </div>
-
-                </div>
-
-                <span class="status-pill hot-pill">
-                  Hot
-                </span>
-
-                <span class="lead-requirement">
-                  Commercial Plot<br>
-                  Bahria
-                </span>
-
-              </div>
-
-            </div>
-
-          </section>
-
-
-          <!-- PROPERTIES OVERVIEW -->
-
-          <section class="dashboard-card properties-card">
-
-            <div class="card-header">
-
-              <div>
-
-                <h2>Properties Overview</h2>
-                <span>Your current inventory</span>
-
-              </div>
-
-              <button class="more-button">•••</button>
-
-            </div>
-
-
-            <div class="property-total">
-
-              <div>
-                <span>Total Properties</span>
-                <strong>286</strong>
-              </div>
-
-              <div class="property-growth">
-                +14 this month
-              </div>
-
-            </div>
-
-
-            <div class="property-stats">
-
-              <div class="property-stat">
-
-                <div class="property-stat-icon available">
-                  ✓
-                </div>
+              <div class="panel-header">
 
                 <div>
-                  <strong>152</strong>
-                  <span>Available</span>
+
+                  <div class="panel-kicker">
+                    AI ACTIVITY
+                  </div>
+
+                  <h2>
+                    Recent Activity
+                  </h2>
+
                 </div>
+
+                <span class="activity-live">
+                  Live
+                </span>
 
               </div>
 
 
-              <div class="property-stat">
-
-                <div class="property-stat-icon hold">
-                  ◷
-                </div>
-
-                <div>
-                  <strong>68</strong>
-                  <span>On Hold</span>
-                </div>
-
-              </div>
+              <div class="activity-list">
 
 
-              <div class="property-stat">
+                <div class="activity-item">
 
-                <div class="property-stat-icon sold">
-                  ✓
-                </div>
-
-                <div>
-                  <strong>66</strong>
-                  <span>Sold</span>
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="inventory-bar">
-
-              <span
-                class="inventory-available"
-                style="width: 53.1%;"
-              ></span>
-
-              <span
-                class="inventory-hold"
-                style="width: 23.8%;"
-              ></span>
-
-              <span
-                class="inventory-sold"
-                style="width: 23.1%;"
-              ></span>
-
-            </div>
-
-
-            <button class="text-button">
-              Manage Properties
-              <span>→</span>
-            </button>
-
-          </section>
-
-
-          <!-- AI ACTIVITY -->
-
-          <section class="dashboard-card activity-card">
-
-            <div class="card-header">
-
-              <div>
-
-                <div class="card-title-with-icon">
-
-                  <div class="card-title-icon small-ai">
+                  <div class="activity-icon purple">
                     ✦
                   </div>
 
                   <div>
-                    <h2>AI Activity</h2>
-                    <span>Latest intelligent actions</span>
+
+                    <strong>
+                      AI matched a property
+                    </strong>
+
+                    <span>
+                      Ahmed Khan → Faisal Town
+                    </span>
+
+                    <small>
+                      2 min ago
+                    </small>
+
+                  </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                  <div class="activity-icon green">
+                    ✓
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Lead qualified
+                    </strong>
+
+                    <span>
+                      Bilal Ahmed marked Hot
+                    </span>
+
+                    <small>
+                      18 min ago
+                    </small>
+
+                  </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                  <div class="activity-icon blue">
+                    ↗
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Follow-up reminder
+                    </strong>
+
+                    <span>
+                      3 follow-ups due today
+                    </span>
+
+                    <small>
+                      42 min ago
+                    </small>
+
+                  </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                  <div class="activity-icon orange">
+                    ◉
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      WhatsApp automation
+                    </strong>
+
+                    <span>
+                      12 messages prepared
+                    </span>
+
+                    <small>
+                      1 hr ago
+                    </small>
+
                   </div>
 
                 </div>
 
               </div>
 
-              <button class="more-button">•••</button>
 
-            </div>
+              <button
+                class="text-button activity-button"
+                type="button"
+                data-page-target="reports"
+              >
+                View AI activity
+                <span>→</span>
+              </button>
+
+            </section>
 
 
-            <div class="activity-list">
 
+            <!-- =============================================
+                 AI INSIGHT CARD
+                 ============================================= -->
 
-              <div class="activity-item">
+            <section class="ai-insight-card">
 
-                <div class="activity-marker blue-marker">
+              <div class="insight-orb"></div>
+
+              <div class="insight-header">
+
+                <div class="insight-icon">
                   ✦
                 </div>
 
-                <div class="activity-info">
-
-                  <strong>
-                    AI matched 3 properties
-                  </strong>
-
-                  <span>
-                    for Ahmed Khan
-                  </span>
-
-                  <small>
-                    4 minutes ago
-                  </small>
-
-                </div>
+                <span>
+                  AI INSIGHT
+                </span>
 
               </div>
 
+              <h3>
+                Your pipeline is heating up.
+              </h3>
 
-              <div class="activity-item">
+              <p>
+                12 hot leads are active today.
+                4 have a matching property ready
+                for immediate follow-up.
+              </p>
 
-                <div class="activity-marker green-marker">
-                  ✓
-                </div>
+              <button
+                class="insight-button"
+                type="button"
+                data-page-target="ai-assistant"
+              >
+                Ask AI Assistant
+                <span>→</span>
+              </button>
 
-                <div class="activity-info">
+            </section>
 
-                  <strong>
-                    Follow-up reminder sent
-                  </strong>
+          </aside>
 
-                  <span>
-                    to Usman Ali
-                  </span>
-
-                  <small>
-                    18 minutes ago
-                  </small>
-
-                </div>
-
-              </div>
-
-
-              <div class="activity-item">
-
-                <div class="activity-marker purple-marker">
-                  +
-                </div>
-
-                <div class="activity-info">
-
-                  <strong>
-                    New lead added
-                  </strong>
-
-                  <span>
-                    Bilal Ahmed
-                  </span>
-
-                  <small>
-                    42 minutes ago
-                  </small>
-
-                </div>
-
-              </div>
+        </section>
 
 
-              <div class="activity-item">
 
-                <div class="activity-marker orange-marker">
-                  ▣
-                </div>
-
-                <div class="activity-info">
-
-                  <strong>
-                    Daily report generated
-                  </strong>
-
-                  <span>
-                    ERealtor AI
-                  </span>
-
-                  <small>
-                    1 hour ago
-                  </small>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <button class="text-button">
-              View AI Activity
-              <span>→</span>
-            </button>
-
-          </section>
-
-        </div>
-
-
-        <!-- =========================
-             AI BANNER
-        ========================== -->
+        <!-- =================================================
+             AI ASSISTANT BANNER
+             ================================================= -->
 
         <section class="ai-banner">
 
           <div class="ai-banner-glow"></div>
 
+          <div class="ai-banner-icon">
+            ✦
+          </div>
+
           <div class="ai-banner-content">
 
-            <div class="ai-banner-icon">
-              ✦
-            </div>
+            <span>
+              EREALTOR AI
+            </span>
 
-            <div>
+            <h2>
+              Let AI handle the busywork.
+            </h2>
 
-              <div class="ai-banner-label">
-                EREALTOR AI
-              </div>
-
-              <h2>
-                Your intelligent real estate assistant.
-              </h2>
-
-              <p>
-                Manage leads, properties, follow-ups and marketing
-                from one smart platform.
-              </p>
-
-            </div>
+            <p>
+              Match properties, qualify leads, prepare follow-ups,
+              generate marketing content and monitor your business
+              from one intelligent workspace.
+            </p>
 
           </div>
 
-
-          <button class="ai-banner-button">
+          <button
+            class="ai-banner-button"
+            type="button"
+            data-page-target="ai-assistant"
+          >
             Open AI Assistant
             <span>→</span>
           </button>
@@ -1229,388 +1896,632 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              FOOTER
-        ========================== -->
+             ================================================= -->
 
         <footer class="dashboard-footer">
 
           <div>
-            © 2026 ERealtor AI. All rights reserved.
-          </div>
 
-          <div class="footer-links">
+            <strong>
+              ERealtor
+            </strong>
 
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Support</a>
-
-          </div>
-
-          <div class="footer-status">
-
-            <span class="online-dot"></span>
-
-            All systems operational
+            <span>
+              AI Real Estate OS
+            </span>
 
           </div>
+
+          <span>
+            Built for smarter real estate.
+          </span>
+
+          <span>
+            © 2026 ERealtor AI
+          </span>
 
         </footer>
 
-      </section>
+      </div>
 
     </main>
 
   </div>
 
 
-  <!-- =========================
-       BASIC INTERACTION
-  ========================== -->
 
-<script>
+  <!-- =====================================================
+       MOBILE OVERLAY
+       ===================================================== -->
 
-  // ================================
-  // EREALTOR AI — API CONNECTION
-  // ================================
-
-  const EREALTOR_API =
-    "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
+  <div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+  ></div>
 
 
-  // ================================
-  // API TEST
-  // ================================
 
-  async function testERealtorAPI() {
+  <!-- =====================================================
+       JAVASCRIPT
+       API + UI INTERACTIONS
+       ===================================================== -->
 
-    try {
+  <script>
 
-      const response = await fetch(EREALTOR_API);
+    /* =====================================================
+       EREALTOR API
+       ===================================================== */
 
-      const data = await response.json();
+    const EREALTOR_API =
+      "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
 
-      console.log("ERealtor API:", data);
 
-      if (data.success === true) {
+    /* =====================================================
+       DOM READY
+       ===================================================== */
 
-        console.log("✅ ERealtor API connected successfully.");
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
 
-      } else {
 
-        console.warn("⚠️ ERealtor API returned an unexpected response.");
+        /* =================================================
+           SIDEBAR NAVIGATION
+           ================================================= */
+
+        const navItems =
+          document.querySelectorAll(".nav-item");
+
+
+        navItems.forEach(
+          function (item) {
+
+            item.addEventListener(
+              "click",
+              function (event) {
+
+                event.preventDefault();
+
+                navItems.forEach(
+                  function (nav) {
+                    nav.classList.remove("active");
+                  }
+                );
+
+                item.classList.add("active");
+
+                closeMobileSidebar();
+
+              }
+            );
+
+          }
+        );
+
+
+
+        /* =================================================
+           PAGE TARGET BUTTONS
+           ================================================= */
+
+        const pageButtons =
+          document.querySelectorAll(
+            "[data-page-target]"
+          );
+
+
+        pageButtons.forEach(
+          function (button) {
+
+            button.addEventListener(
+              "click",
+              function () {
+
+                const target =
+                  button.getAttribute(
+                    "data-page-target"
+                  );
+
+                const targetNav =
+                  document.querySelector(
+                    '.nav-item[data-page="' +
+                    target +
+                    '"]'
+                  );
+
+                if (targetNav) {
+
+                  navItems.forEach(
+                    function (nav) {
+                      nav.classList.remove("active");
+                    }
+                  );
+
+                  targetNav.classList.add("active");
+
+                }
+
+                if (
+                  target === "ai-assistant"
+                ) {
+
+                  showToast(
+                    "AI Assistant is ready for the next module."
+                  );
+
+                }
+
+              }
+            );
+
+          }
+        );
+
+
+
+        /* =================================================
+           ADD BUTTON
+           ================================================= */
+
+        const addButtons =
+          document.querySelectorAll(
+            "#addButton, #heroAddButton"
+          );
+
+
+        addButtons.forEach(
+          function (button) {
+
+            button.addEventListener(
+              "click",
+              function () {
+
+                showToast(
+                  "ERealtor Add menu is coming next."
+                );
+
+              }
+            );
+
+          }
+        );
+
+
+
+        /* =================================================
+           AI BUTTONS
+           ================================================= */
+
+        const aiButtons =
+          document.querySelectorAll(
+            ".sidebar-ai-button, .ai-banner-button, .insight-button"
+          );
+
+
+        aiButtons.forEach(
+          function (button) {
+
+            button.addEventListener(
+              "click",
+              function () {
+
+                showToast(
+                  "ERealtor AI Assistant is coming next."
+                );
+
+              }
+            );
+
+          }
+        );
+
+
+
+        /* =================================================
+           PROPERTY BUTTON
+           ================================================= */
+
+        const propertyButton =
+          document.getElementById(
+            "viewPropertyButton"
+          );
+
+
+        if (propertyButton) {
+
+          propertyButton.addEventListener(
+            "click",
+            function () {
+
+              showToast(
+                "Property details module is coming next."
+              );
+
+            }
+          );
+
+        }
+
+
+
+        /* =================================================
+           MOBILE SIDEBAR
+           ================================================= */
+
+        const mobileMenuButton =
+          document.getElementById(
+            "mobileMenuButton"
+          );
+
+        const sidebar =
+          document.getElementById(
+            "sidebar"
+          );
+
+        const sidebarOverlay =
+          document.getElementById(
+            "sidebarOverlay"
+          );
+
+
+        if (mobileMenuButton) {
+
+          mobileMenuButton.addEventListener(
+            "click",
+            function () {
+
+              sidebar.classList.add(
+                "mobile-open"
+              );
+
+              sidebarOverlay.classList.add(
+                "active"
+              );
+
+            }
+          );
+
+        }
+
+
+        if (sidebarOverlay) {
+
+          sidebarOverlay.addEventListener(
+            "click",
+            closeMobileSidebar
+          );
+
+        }
+
+
+
+        /* =================================================
+           GLOBAL SEARCH
+           ================================================= */
+
+        const searchInput =
+          document.getElementById(
+            "globalSearch"
+          );
+
+
+        if (searchInput) {
+
+          searchInput.addEventListener(
+            "keydown",
+            function (event) {
+
+              if (
+                event.key === "Enter"
+              ) {
+
+                const value =
+                  searchInput.value.trim();
+
+                if (value) {
+
+                  showToast(
+                    "Searching ERealtor for: " +
+                    value
+                  );
+
+                }
+
+              }
+
+            }
+          );
+
+        }
+
+
+
+        /* =================================================
+           LOAD LIVE PROPERTY
+           ================================================= */
+
+        loadSmartMatchProperty();
+
+      }
+    );
+
+
+
+    /* =====================================================
+       CLOSE MOBILE SIDEBAR
+       ===================================================== */
+
+    function closeMobileSidebar() {
+
+      const sidebar =
+        document.getElementById(
+          "sidebar"
+        );
+
+      const overlay =
+        document.getElementById(
+          "sidebarOverlay"
+        );
+
+
+      if (sidebar) {
+
+        sidebar.classList.remove(
+          "mobile-open"
+        );
 
       }
 
-    } catch (error) {
 
-      console.error("❌ ERealtor API connection failed:", error);
+      if (overlay) {
 
-    }
-
-  }
-
-
-  // ================================
-  // DASHBOARD INTERACTIONS
-  // ================================
-
-  document.addEventListener("DOMContentLoaded", function () {
-
-
-    // Test API
-    testERealtorAPI();
-
-
-    // Sidebar navigation
-    const navItems = document.querySelectorAll(".nav-item");
-
-    navItems.forEach(function (item) {
-
-      item.addEventListener("click", function (event) {
-
-        event.preventDefault();
-
-        navItems.forEach(function (nav) {
-
-          nav.classList.remove("active");
-
-        });
-
-        item.classList.add("active");
-
-      });
-
-    });
-
-
-    // Add button
-    const addButton = document.querySelector(".add-button");
-
-    if (addButton) {
-
-      addButton.addEventListener("click", function () {
-
-        alert(
-          "ERealtor Add menu — functionality coming soon."
+        overlay.classList.remove(
+          "active"
         );
 
-      });
+      }
 
     }
 
 
-    // AI Assistant buttons
-    const chatButtons = document.querySelectorAll(
-      ".sidebar-ai-button, .ai-banner-button"
-    );
 
-    chatButtons.forEach(function (button) {
+    /* =====================================================
+       SMART MATCH PROPERTY API
+       ===================================================== */
 
-      button.addEventListener("click", function () {
+    function loadSmartMatchProperty() {
 
-        alert(
-          "ERealtor AI Assistant — coming soon."
+      fetch(
+        EREALTOR_API +
+        "?location=Islamabad"
+      )
+
+      .then(
+        function (response) {
+
+          if (!response.ok) {
+
+            throw new Error(
+              "API request failed: " +
+              response.status
+            );
+
+          }
+
+          return response.json();
+
+        }
+      )
+
+      .then(
+        function (data) {
+
+          console.log(
+            "ERealtor API Response:",
+            data
+          );
+
+
+          if (
+            data &&
+            data.success &&
+            Array.isArray(
+              data.properties
+            ) &&
+            data.properties.length > 0
+          ) {
+
+            const property =
+              data.properties[0];
+
+
+            const propertyName =
+              document.getElementById(
+                "smartMatchPropertyName"
+              );
+
+
+            if (propertyName) {
+
+              propertyName.textContent =
+                property.project ||
+                "Property";
+
+            }
+
+
+            const propertySize =
+              document.getElementById(
+                "smartMatchPropertySize"
+              );
+
+
+            if (propertySize) {
+
+              propertySize.textContent =
+                (property.size || "") +
+                " " +
+                (property.propertyType || "");
+
+            }
+
+
+            const propertyLocation =
+              document.getElementById(
+                "smartMatchPropertyLocation"
+              );
+
+
+            if (propertyLocation) {
+
+              propertyLocation.textContent =
+                property.location ||
+                "Islamabad";
+
+            }
+
+
+            const propertyPrice =
+              document.getElementById(
+                "smartMatchPropertyPrice"
+              );
+
+
+            if (propertyPrice) {
+
+              const price =
+                Number(
+                  property.price || 0
+                );
+
+
+              propertyPrice.textContent =
+                "PKR " +
+                price.toLocaleString(
+                  "en-PK"
+                );
+
+            }
+
+
+            const propertyStatus =
+              document.getElementById(
+                "smartMatchPropertyStatus"
+              );
+
+
+            if (propertyStatus) {
+
+              propertyStatus.textContent =
+                property.status ||
+                "Available";
+
+            }
+
+
+            console.log(
+              "ERealtor Smart Match connected successfully.",
+              property
+            );
+
+          }
+
+          else {
+
+            console.warn(
+              "ERealtor API returned no properties."
+            );
+
+          }
+
+        }
+      )
+
+      .catch(
+        function (error) {
+
+          console.error(
+            "ERealtor API Connection Error:",
+            error
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       TOAST
+       ===================================================== */
+
+    function showToast(message) {
+
+      const existingToast =
+        document.querySelector(
+          ".erealtor-toast"
         );
 
-      });
 
-    });
+      if (existingToast) {
 
-  });
+        existingToast.remove();
+
+      }
+
+
+      const toast =
+        document.createElement(
+          "div"
+        );
+
+
+      toast.className =
+        "erealtor-toast";
+
+
+      toast.innerHTML =
+        "<span>✦</span>" +
+        "<div>" +
+        "<strong>ERealtor AI</strong>" +
+        "<small>" +
+        message +
+        "</small>" +
+        "</div>";
+
+
+      document.body.appendChild(
+        toast
+      );
+
+
+      setTimeout(
+        function () {
+
+          toast.classList.add(
+            "hide"
+          );
+
+          setTimeout(
+            function () {
+
+              toast.remove();
+
+            },
+            300
+          );
+
+        },
+        3200
+      );
+
+    }
 
   </script>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  // ==========================================
-  // EREALTOR API
-  // ==========================================
-
-  const API_URL =
-    "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
-
-
-  // ==========================================
-  // SIDEBAR NAVIGATION
-  // ==========================================
-
-  const navItems = document.querySelectorAll(".nav-item");
-
-  navItems.forEach(function (item) {
-
-    item.addEventListener("click", function (event) {
-
-      event.preventDefault();
-
-      navItems.forEach(function (nav) {
-        nav.classList.remove("active");
-      });
-
-      item.classList.add("active");
-
-    });
-
-  });
-
-
-  // ==========================================
-  // ADD BUTTON
-  // ==========================================
-
-  const addButton = document.querySelector(".add-button");
-
-  if (addButton) {
-
-    addButton.addEventListener("click", function () {
-
-      alert(
-        "ERealtor Add menu — functionality coming soon."
-      );
-
-    });
-
-  }
-
-
-  // ==========================================
-  // AI ASSISTANT BUTTONS
-  // ==========================================
-
-  const chatButtons = document.querySelectorAll(
-    ".sidebar-ai-button, .ai-banner-button"
-  );
-
-  chatButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-      alert(
-        "ERealtor AI Assistant — coming soon."
-      );
-
-    });
-
-  });
-
-// ==========================================
-// LIVE AI SMART MATCH PROPERTY API
-// ==========================================
-
-fetch(
-  API_URL + "?location=Islamabad"
-)
-
-  .then(function (response) {
-
-    if (!response.ok) {
-      throw new Error(
-        "API request failed: " + response.status
-      );
-    }
-
-    return response.json();
-
-  })
-
-  .then(function (data) {
-
-    console.log(
-      "ERealtor API Response:",
-      data
-    );
-
-
-    // ======================================
-    // API SUCCESS
-    // ======================================
-
-    if (
-      data &&
-      data.success &&
-      Array.isArray(data.properties) &&
-      data.properties.length > 0
-    ) {
-
-      const property = data.properties[0];
-
-
-      // ====================================
-      // SMART MATCH PROPERTY NAME
-      // ====================================
-
-      const propertyName =
-        document.getElementById(
-          "smartMatchPropertyName"
-        );
-
-      if (propertyName) {
-        propertyName.textContent =
-          property.project || "Property";
-      }
-
-
-      // ====================================
-      // SMART MATCH PROPERTY SIZE
-      // ====================================
-
-      const propertySize =
-        document.getElementById(
-          "smartMatchPropertySize"
-        );
-
-      if (propertySize) {
-        propertySize.textContent =
-          (property.size || "") +
-          " " +
-          (property.propertyType || "");
-      }
-
-
-      // ====================================
-      // SMART MATCH LOCATION
-      // ====================================
-
-      const propertyLocation =
-        document.getElementById(
-          "smartMatchPropertyLocation"
-        );
-
-      if (propertyLocation) {
-        propertyLocation.textContent =
-          property.location || "Islamabad";
-      }
-
-
-      // ====================================
-      // SMART MATCH PRICE
-      // ====================================
-
-      const propertyPrice =
-        document.getElementById(
-          "smartMatchPropertyPrice"
-        );
-
-      if (propertyPrice) {
-
-        const price =
-          Number(property.price || 0);
-
-        propertyPrice.textContent =
-          "PKR " +
-          price.toLocaleString("en-PK");
-
-      }
-
-
-      // ====================================
-      // SMART MATCH STATUS
-      // ====================================
-
-      const propertyStatus =
-        document.getElementById(
-          "smartMatchPropertyStatus"
-        );
-
-      if (propertyStatus) {
-        propertyStatus.textContent =
-          property.status || "Available";
-      }
-
-
-      // ====================================
-      // SUCCESS LOG
-      // ====================================
-
-      console.log(
-        "ERealtor Property API connected successfully.",
-        property
-      );
-
-    } else {
-
-      console.warn(
-        "ERealtor API returned no properties."
-      );
-
-    }
-
-  })
-
-  .catch(function (error) {
-
-    console.error(
-      "ERealtor API Connection Error:",
-      error
-    );
-
-  });
-
-});
-
-</script>
 
 </body>
 </html>
