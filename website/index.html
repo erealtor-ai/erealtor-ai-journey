@@ -1536,6 +1536,140 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 loadRecentLeads();
 
+  function loadDashboardKPIs() {
+
+  fetch(API_URL + "?action=leads")
+
+    .then(function(response) {
+      return response.json();
+    })
+
+    .then(function(data) {
+
+      if (
+        !data ||
+        data.success !== true ||
+        !Array.isArray(data.leads)
+      ) {
+        throw new Error("Invalid leads response");
+      }
+
+
+      const leads = data.leads.filter(function(lead) {
+
+        return (
+          lead &&
+          lead.name &&
+          String(lead.name).trim() !== "" &&
+          String(lead.name).trim().toLowerCase() !== "live api test"
+        );
+
+      });
+
+
+      // TOTAL LEADS
+      const totalLeadsElement =
+        document.getElementById("totalLeadsValue");
+
+      if (totalLeadsElement) {
+        totalLeadsElement.textContent = leads.length;
+      }
+
+
+      // HOT LEADS
+      const hotLeadsElement =
+        document.getElementById("hotLeadsValue");
+
+      const hotLeads = leads.filter(function(lead) {
+
+        return String(
+          lead.temperature || ""
+        ).trim().toLowerCase() === "hot";
+
+      });
+
+      if (hotLeadsElement) {
+        hotLeadsElement.textContent = hotLeads.length;
+      }
+
+
+      // FOLLOW UPS
+      const followUpsElement =
+        document.getElementById("followUpsValue");
+
+      const followUps = leads.filter(function(lead) {
+
+        const status =
+          String(lead.followupStatus || "")
+            .trim()
+            .toLowerCase();
+
+        return (
+          status === "upcoming" ||
+          status === "due today" ||
+          status === "overdue"
+        );
+
+      });
+
+      if (followUpsElement) {
+        followUpsElement.textContent = followUps.length;
+      }
+
+
+      // SITE VISITS
+      const siteVisitsElement =
+        document.getElementById("siteVisitsValue");
+
+      const siteVisits = leads.filter(function(lead) {
+
+        const status =
+          String(lead.status || "")
+            .trim()
+            .toLowerCase();
+
+        const visitDate =
+          String(lead.siteVisitDate || "")
+            .trim()
+            .toLowerCase();
+
+        return (
+          status.includes("site visit") ||
+          visitDate !== "" &&
+          visitDate !== "not provided"
+        );
+
+      });
+
+      if (siteVisitsElement) {
+        siteVisitsElement.textContent = siteVisits.length;
+      }
+
+
+      console.log(
+        "ERealtor AI Dashboard KPIs loaded:",
+        {
+          totalLeads: leads.length,
+          hotLeads: hotLeads.length,
+          followUps: followUps.length,
+          siteVisits: siteVisits.length
+        }
+      );
+
+    })
+
+    .catch(function(error) {
+
+      console.error(
+        "ERealtor AI Dashboard KPI Error:",
+        error
+      );
+
+    });
+
+}
+  loadDashboardKPIs();
+
   // ==========================================
   // SIDEBAR NAVIGATION
   // ==========================================
