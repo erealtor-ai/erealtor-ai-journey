@@ -1356,7 +1356,184 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const API_URL =
     "https://script.google.com/macros/s/AKfycbxdyrj_aRlvVHgqO1gIz-Nt3vBCz7laAhp_lqXNTBMtx4oSLtzyKP0cDkBdP67owmwS/exec";
+  function loadRecentLeads() {
 
+  const container = document.getElementById("recentLeadsContainer");
+
+  if (!container) return;
+
+  fetch(API_URL + "?action=leads")
+
+    .then(function(response) {
+      return response.json();
+    })
+
+    .then(function(data) {
+
+      if (
+        !data ||
+        data.success !== true ||
+        !Array.isArray(data.leads)
+      ) {
+        throw new Error("Invalid leads response");
+      }
+
+      const leads = data.leads
+        .filter(function(lead) {
+          return (
+            lead &&
+            lead.name &&
+            String(lead.name).trim() !== ""
+          );
+        })
+        .slice(-3)
+        .reverse();
+
+
+      container.innerHTML = "";
+
+
+      if (leads.length === 0) {
+
+        container.innerHTML = `
+          <div class="lead-row">
+            <div class="lead-person">
+              <div class="table-avatar avatar-blue">
+                --
+              </div>
+
+              <div>
+                <strong>No leads found</strong>
+                <span>ERealtor AI CRM</span>
+              </div>
+            </div>
+
+            <span class="status-pill warm-pill">
+              —
+            </span>
+
+            <span class="lead-requirement">
+              No recent leads available
+            </span>
+          </div>
+        `;
+
+        return;
+      }
+
+
+      leads.forEach(function(lead, index) {
+
+        const name =
+          String(lead.name || "Unknown Lead").trim();
+
+        const temperature =
+          String(lead.temperature || "Warm").trim();
+
+        const propertyType =
+          String(lead.propertyType || "Property").trim();
+
+        const size =
+          String(lead.size || "Size not provided").trim();
+
+        const location =
+          String(lead.location || "Location not provided").trim();
+
+
+        const initials = name
+          .split(/\s+/)
+          .map(function(word) {
+            return word.charAt(0);
+          })
+          .join("")
+          .substring(0, 2)
+          .toUpperCase();
+
+
+        const requirement =
+          size + " " + propertyType +
+          "<br>" +
+          location;
+
+
+        let avatarClass = "avatar-blue";
+
+        if (index === 1) {
+          avatarClass = "avatar-purple";
+        }
+
+        if (index === 2) {
+          avatarClass = "avatar-green";
+        }
+
+
+        let statusClass = "warm-pill";
+
+        if (temperature.toLowerCase() === "hot") {
+          statusClass = "hot-pill";
+        }
+
+        else if (temperature.toLowerCase() === "cold") {
+          statusClass = "cold-pill";
+        }
+
+
+        const row = document.createElement("div");
+
+        row.className = "lead-row";
+
+
+        row.innerHTML = `
+
+          <div class="lead-person">
+
+            <div class="table-avatar ${avatarClass}">
+              ${initials}
+            </div>
+
+            <div>
+              <strong>${name}</strong>
+              <span>${lead.leadId || "Live Lead"}</span>
+            </div>
+
+          </div>
+
+
+          <span class="status-pill ${statusClass}">
+            ${temperature}
+          </span>
+
+
+          <span class="lead-requirement">
+            ${requirement}
+          </span>
+
+        `;
+
+
+        container.appendChild(row);
+
+      });
+
+
+      console.log(
+        "ERealtor AI Recent Leads loaded:",
+        leads
+      );
+
+    })
+
+    .catch(function(error) {
+
+      console.error(
+        "ERealtor AI Recent Leads Error:",
+        error
+      );
+
+    });
+
+}
+loadRecentLeads();
 
   // ==========================================
   // SIDEBAR NAVIGATION
