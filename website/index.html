@@ -1378,14 +1378,15 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error("Invalid leads response");
       }
 
-      const leads = data.leads
-        .filter(function(lead) {
-          return (
-            lead &&
-            lead.name &&
-            String(lead.name).trim() !== ""
-          );
-        })
+     const leads = data.leads
+  .filter(function(lead) {
+    return (
+      lead &&
+      lead.name &&
+      String(lead.name).trim() !== "" &&
+      String(lead.name).trim().toLowerCase() !== "live api test"
+    );
+  })
         .slice(-3)
         .reverse();
 
