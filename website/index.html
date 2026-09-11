@@ -1472,18 +1472,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 // ==========================================
-// LIVE AI SMART MATCH PROPERTY API
+// LIVE AI SMART MATCH — REAL LEAD API
 // ==========================================
 
+const LEAD_ID = "L001";
+
 fetch(
-  API_URL + "?location=Islamabad"
+  API_URL +
+  "?action=leadMatch&leadId=" +
+  encodeURIComponent(LEAD_ID)
 )
 
   .then(function (response) {
 
     if (!response.ok) {
       throw new Error(
-        "API request failed: " + response.status
+        "AI Lead Match API request failed: " +
+        response.status
       );
     }
 
@@ -1494,7 +1499,7 @@ fetch(
   .then(function (data) {
 
     console.log(
-      "ERealtor API Response:",
+      "ERealtor AI Lead Match Response:",
       data
     );
 
@@ -1505,16 +1510,31 @@ fetch(
 
     if (
       data &&
-      data.success &&
-      Array.isArray(data.properties) &&
-      data.properties.length > 0
+      data.success === true &&
+      data.matched === true &&
+      data.recommendation
     ) {
 
-      const property = data.properties[0];
+      const lead = data.leadName || "Lead";
+      const property = data.recommendation;
 
 
       // ====================================
-      // SMART MATCH PROPERTY NAME
+      // LEAD NAME
+      // ====================================
+
+      const leadName =
+        document.querySelector(
+          ".match-person strong"
+        );
+
+      if (leadName) {
+        leadName.textContent = lead;
+      }
+
+
+      // ====================================
+      // PROPERTY NAME
       // ====================================
 
       const propertyName =
@@ -1529,7 +1549,7 @@ fetch(
 
 
       // ====================================
-      // SMART MATCH PROPERTY SIZE
+      // PROPERTY SIZE + TYPE
       // ====================================
 
       const propertySize =
@@ -1538,15 +1558,17 @@ fetch(
         );
 
       if (propertySize) {
+
         propertySize.textContent =
           (property.size || "") +
           " " +
           (property.propertyType || "");
+
       }
 
 
       // ====================================
-      // SMART MATCH LOCATION
+      // PROPERTY LOCATION
       // ====================================
 
       const propertyLocation =
@@ -1555,13 +1577,15 @@ fetch(
         );
 
       if (propertyLocation) {
+
         propertyLocation.textContent =
-          property.location || "Islamabad";
+          property.location || "";
+
       }
 
 
       // ====================================
-      // SMART MATCH PRICE
+      // PROPERTY PRICE
       // ====================================
 
       const propertyPrice =
@@ -1582,7 +1606,7 @@ fetch(
 
 
       // ====================================
-      // SMART MATCH STATUS
+      // PROPERTY STATUS
       // ====================================
 
       const propertyStatus =
@@ -1591,8 +1615,28 @@ fetch(
         );
 
       if (propertyStatus) {
+
         propertyStatus.textContent =
           property.status || "Available";
+
+      }
+
+
+      // ====================================
+      // LEAD LOCATION
+      // ====================================
+
+      const leadMeta =
+        document.querySelector(
+          ".match-person span"
+        );
+
+      if (leadMeta) {
+
+        leadMeta.textContent =
+          "AI Matched Lead • " +
+          (property.location || "Pakistan");
+
       }
 
 
@@ -1601,14 +1645,18 @@ fetch(
       // ====================================
 
       console.log(
-        "ERealtor Property API connected successfully.",
-        property
+        "ERealtor AI Smart Match connected successfully.",
+        {
+          lead: lead,
+          property: property
+        }
       );
 
     } else {
 
       console.warn(
-        "ERealtor API returned no properties."
+        "ERealtor AI could not find a matching property.",
+        data
       );
 
     }
@@ -1618,12 +1666,11 @@ fetch(
   .catch(function (error) {
 
     console.error(
-      "ERealtor API Connection Error:",
+      "ERealtor AI Smart Match Error:",
       error
     );
 
   });
-
 });
 
 </script>
