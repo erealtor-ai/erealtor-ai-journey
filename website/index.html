@@ -1580,6 +1580,147 @@ loadRecentLeads();
 
 }
   loadDashboardKPIs();
+  function loadUpcomingFollowUps() {
+
+  const container = document.getElementById("upcomingFollowUpsContainer");
+
+  if (!container) return;
+
+  fetch(API_URL + "?action=followups")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+
+      if (
+        !data ||
+        data.success !== true ||
+        !Array.isArray(data.followUps)
+      ) {
+        throw new Error("Invalid follow-ups response");
+      }
+
+      const followUps = data.followUps;
+
+      container.innerHTML = "";
+
+      if (followUps.length === 0) {
+
+        container.innerHTML = `
+          <div class="followup-item">
+            <div class="followup-info">
+              <strong>No upcoming follow-ups</strong>
+              <span>All follow-ups are up to date</span>
+            </div>
+          </div>
+        `;
+
+        return;
+      }
+
+      followUps.forEach(function(followUp) {
+
+        const name =
+          String(followUp.leadName || "Unknown Lead").trim();
+
+        const action =
+          String(followUp.nextAction || "Follow up").trim();
+
+        const status =
+          String(followUp.followupStatus || "").trim();
+
+        const date =
+          String(followUp.nextFollowupDate || "").trim();
+
+        let displayDate = "Date not set";
+
+        if (
+          date !== "" &&
+          date.toLowerCase() !== "not provided"
+        ) {
+
+          const parsedDate = new Date(date);
+
+          if (!isNaN(parsedDate.getTime())) {
+
+            displayDate = parsedDate.toLocaleString(
+              "en-US",
+              {
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+              }
+            );
+
+          } else {
+
+            displayDate = date;
+
+          }
+        }
+
+        let iconClass = "call";
+
+        if (
+          action.toLowerCase().includes("site") ||
+          action.toLowerCase().includes("visit")
+        ) {
+          iconClass = "visit";
+        }
+        else if (
+          action.toLowerCase().includes("payment")
+        ) {
+          iconClass = "payment";
+        }
+        else if (
+          action.toLowerCase().includes("document")
+        ) {
+          iconClass = "document";
+        }
+
+        const row = document.createElement("div");
+
+        row.className = "followup-item";
+
+        row.innerHTML = `
+          <div class="followup-icon ${iconClass}">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M5 4h3.5l1.3 4.5-2 1.5a12 12 0 0 0 6.2 6.2l1.5-2 4.5 1.3V19a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4z"/>
+            </svg>
+          </div>
+
+          <div class="followup-info">
+            <strong>${name}</strong>
+            <span>${action}</span>
+          </div>
+
+          <div class="followup-time">
+            ${displayDate}
+          </div>
+        `;
+
+        container.appendChild(row);
+
+      });
+
+      console.log(
+        "ERealtor AI Upcoming Follow Ups loaded:",
+        followUps
+      );
+
+    })
+    .catch(function(error) {
+
+      console.error(
+        "ERealtor AI Upcoming Follow Ups Error:",
+        error
+      );
+
+    });
+}
+
+loadUpcomingFollowUps();
   function loadLeadStatus() {
   fetch(API_URL + "?action=leads")
     .then(function(response) {
