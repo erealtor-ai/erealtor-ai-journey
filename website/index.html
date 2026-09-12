@@ -1672,6 +1672,107 @@ loadRecentLeads();
 
 }
   loadDashboardKPIs();
+  function loadLeadStatus() {
+  fetch(API_URL + "?action=leads")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+
+      if (!data || data.success !== true || !Array.isArray(data.leads)) {
+        throw new Error("Invalid leads response");
+      }
+
+      const leads = data.leads.filter(function(lead) {
+        return (
+          lead &&
+          lead.name &&
+          String(lead.name).trim() !== "" &&
+          String(lead.name).trim().toLowerCase() !== "live api test"
+        );
+      });
+
+      const total = leads.length;
+
+      const hot = leads.filter(function(lead) {
+        return String(lead.temperature || "")
+          .trim()
+          .toLowerCase() === "hot";
+      }).length;
+
+      const warm = leads.filter(function(lead) {
+        return String(lead.temperature || "")
+          .trim()
+          .toLowerCase() === "warm";
+      }).length;
+
+      const cold = leads.filter(function(lead) {
+        return String(lead.temperature || "")
+          .trim()
+          .toLowerCase() === "cold";
+      }).length;
+
+      // Update total
+      const totalElement = document.getElementById("statusTotalLeads");
+      if (totalElement) {
+        totalElement.textContent = total;
+      }
+
+      // Update Hot
+      const hotElement = document.getElementById("statusHotLeads");
+      if (hotElement) {
+        hotElement.textContent = hot;
+      }
+
+      // Update Warm
+      const warmElement = document.getElementById("statusWarmLeads");
+      if (warmElement) {
+        warmElement.textContent = warm;
+      }
+
+      // Update Cold
+      const coldElement = document.getElementById("statusColdLeads");
+      if (coldElement) {
+        coldElement.textContent = cold;
+      }
+
+      // Calculate percentages
+      const hotPercent = total > 0 ? (hot / total) * 100 : 0;
+      const warmPercent = total > 0 ? (warm / total) * 100 : 0;
+      const coldPercent = total > 0 ? (cold / total) * 100 : 0;
+
+      // Update progress bar
+      const progressHot = document.getElementById("progressHot");
+      if (progressHot) {
+        progressHot.style.width = hotPercent + "%";
+      }
+
+      const progressWarm = document.getElementById("progressWarm");
+      if (progressWarm) {
+        progressWarm.style.width = warmPercent + "%";
+      }
+
+      const progressCold = document.getElementById("progressCold");
+      if (progressCold) {
+        progressCold.style.width = coldPercent + "%";
+      }
+
+      console.log("ERealtor AI Lead Status loaded:", {
+        total: total,
+        hot: hot,
+        warm: warm,
+        cold: cold,
+        hotPercent: hotPercent,
+        warmPercent: warmPercent,
+        coldPercent: coldPercent
+      });
+    })
+    .catch(function(error) {
+      console.error("ERealtor AI Lead Status Error:", error);
+    });
+}
+
+loadLeadStatus();
 
   // ==========================================
   // SIDEBAR NAVIGATION
