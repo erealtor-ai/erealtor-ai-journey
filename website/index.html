@@ -1909,6 +1909,149 @@ loadLeadStatus();
 
 loadPropertiesOverview();
 
+  function loadAIActivity() {
+
+  fetch(API_URL + "?action=aiActivity")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+
+      if (!data || data.success !== true) {
+        throw new Error("Invalid AI Activity response");
+      }
+
+      const container =
+        document.getElementById("aiActivityContainer");
+
+      if (!container) {
+        throw new Error("AI Activity container not found");
+      }
+
+      container.innerHTML = "";
+
+      const activities = Array.isArray(data.activities)
+        ? data.activities
+        : [];
+
+      if (activities.length === 0) {
+
+        container.innerHTML = `
+          <div class="activity-item">
+
+            <div class="activity-marker blue-marker">
+              AI
+            </div>
+
+            <div class="activity-info">
+
+              <strong>No AI activity yet</strong>
+
+              <span>
+                AI activity will appear here automatically.
+              </span>
+
+              <small>
+                No recent activity
+              </small>
+
+            </div>
+
+          </div>
+        `;
+
+        return;
+      }
+
+      activities
+        .slice()
+        .reverse()
+        .slice(0, 4)
+        .forEach(function(activity) {
+
+          let markerClass = "blue-marker";
+          let markerContent = "AI";
+
+          const type =
+            String(activity.activityType || "")
+              .toUpperCase();
+
+          if (type === "FOLLOW_UP") {
+            markerClass = "green-marker";
+            markerContent = "✓";
+          }
+
+          if (type === "NEW_LEAD") {
+            markerClass = "purple-marker";
+            markerContent = "+";
+          }
+
+          if (type === "DAILY_REPORT") {
+            markerClass = "orange-marker";
+            markerContent = "📄";
+          }
+
+          const item =
+            document.createElement("div");
+
+          item.className = "activity-item";
+
+          const date = activity.date
+            ? new Date(activity.date)
+            : null;
+
+          const timeText =
+            date && !isNaN(date.getTime())
+              ? date.toLocaleString()
+              : "Recently";
+
+          item.innerHTML = `
+
+            <div class="activity-marker ${markerClass}">
+              ${markerContent}
+            </div>
+
+            <div class="activity-info">
+
+              <strong>
+                ${activity.description || "AI activity"}
+              </strong>
+
+              <span>
+                ${activity.leadName || "ERealtor AI"}
+              </span>
+
+              <small>
+                ${timeText}
+              </small>
+
+            </div>
+
+          `;
+
+          container.appendChild(item);
+
+        });
+
+      console.log(
+        "ERealtor AI Activity loaded:",
+        data
+      );
+
+    })
+    .catch(function(error) {
+
+      console.error(
+        "ERealtor AI Activity Error:",
+        error
+      );
+
+    });
+
+}
+
+loadAIActivity();
+
   // ==========================================
   // SIDEBAR NAVIGATION
   // ==========================================
