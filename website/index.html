@@ -1813,6 +1813,101 @@ loadUpcomingFollowUps();
 }
 
 loadLeadStatus();
+  function loadPropertiesOverview() {
+
+  fetch(API_URL + "?action=properties")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+
+      if (!data || data.success !== true) {
+        throw new Error("Invalid properties response");
+      }
+
+      const total = Number(data.total || 0);
+      const available = Number(data.available || 0);
+      const hold = Number(data.hold || 0);
+      const sold = Number(data.sold || 0);
+
+      const totalElement =
+        document.getElementById("totalPropertiesValue");
+
+      if (totalElement) {
+        totalElement.textContent = total;
+      }
+
+      const availableElement =
+        document.getElementById("availablePropertiesValue");
+
+      if (availableElement) {
+        availableElement.textContent = available;
+      }
+
+      const holdElement =
+        document.getElementById("holdPropertiesValue");
+
+      if (holdElement) {
+        holdElement.textContent = hold;
+      }
+
+      const soldElement =
+        document.getElementById("soldPropertiesValue");
+
+      if (soldElement) {
+        soldElement.textContent = sold;
+      }
+
+      const availablePercent =
+        total > 0 ? (available / total) * 100 : 0;
+
+      const holdPercent =
+        total > 0 ? (hold / total) * 100 : 0;
+
+      const soldPercent =
+        total > 0 ? (sold / total) * 100 : 0;
+
+      const inventoryAvailable =
+        document.getElementById("inventoryAvailable");
+
+      if (inventoryAvailable) {
+        inventoryAvailable.style.width =
+          availablePercent + "%";
+      }
+
+      const inventoryHold =
+        document.getElementById("inventoryHold");
+
+      if (inventoryHold) {
+        inventoryHold.style.width =
+          holdPercent + "%";
+      }
+
+      const inventorySold =
+        document.getElementById("inventorySold");
+
+      if (inventorySold) {
+        inventorySold.style.width =
+          soldPercent + "%";
+      }
+
+      console.log(
+        "ERealtor AI Properties Overview loaded:",
+        data
+      );
+
+    })
+    .catch(function(error) {
+
+      console.error(
+        "ERealtor AI Properties Overview Error:",
+        error
+      );
+
+    });
+}
+
+loadPropertiesOverview();
 
   // ==========================================
   // SIDEBAR NAVIGATION
