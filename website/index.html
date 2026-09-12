@@ -616,7 +616,7 @@
 
                 <div class="donut-center">
 
-                  <strong>128</strong>
+                 <strong id="statusTotalLeads">128</strong>
                   <span>Total Leads</span>
 
                 </div>
@@ -633,7 +633,7 @@
                     Hot
                   </div>
 
-                  <strong>12</strong>
+                  <strong id="statusHotLeads">12</strong>
 
                 </div>
 
@@ -644,7 +644,7 @@
                     Warm
                   </div>
 
-                  <strong>38</strong>
+                 <strong id="statusWarmLeads">38</strong>
 
                 </div>
 
@@ -655,7 +655,7 @@
                     Cold
                   </div>
 
-                  <strong>78</strong>
+                <strong id="statusColdLeads">78</strong>
 
                 </div>
 
@@ -667,19 +667,22 @@
             <div class="status-progress">
 
               <div
-                class="progress-hot"
-                style="width: 9.4%;"
-              ></div>
+  class="progress-hot"
+  id="progressHot"
+  style="width: 9.4%;"
+></div>
+
+             <div
+  class="progress-warm"
+  id="progressWarm"
+  style="width: 29.7%;"
+></div>
 
               <div
-                class="progress-warm"
-                style="width: 29.7%;"
-              ></div>
-
-              <div
-                class="progress-cold"
-                style="width: 60.9%;"
-              ></div>
+  class="progress-cold"
+  id="progressCold"
+  style="width: 60.9%;"
+></div>
 
             </div>
 
